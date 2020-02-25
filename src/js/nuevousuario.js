@@ -1,13 +1,14 @@
 const formDom = document.querySelector('#formulario')
 
-const generarUsuario = (ID, Nombre, Apellido, RazonSocial, TipoDoc, TipoDocNum , Fecha, Email, ConfEmail, Passw, ConfPassw, Credito) => {
+const generarUsuario = (ID, Cliente, Nombre, Apellido, RazonSocial, TipoDoc, DocNum , Fecha, Email, ConfEmail, Passw, ConfPassw, Credito) => {
     let usuario = {
         id: ID,
+        clienete: Cliente,
         nombre: Nombre,
         apellido: Apellido,
         razonSocial: RazonSocial,
         tipoDoc: TipoDoc,
-        tipoDocNum: TipoDocNum,
+        docNum: DocNum,
         fecha: Fecha,
         email: Email,
         confEmail: ConfEmail,
@@ -25,7 +26,7 @@ const agregarUsuario = (usuario) => {
     let control = 0
     for (let i = 0; i < Usuarios.length; i++) {
         const Usuario = Usuarios[i];
-        if ((Usuario.tipoDocNum === usuario.tipoDocNum) || (Usuario.id === usuario.id)) {
+        if ((Usuario.docNum === usuario.docNum) || (Usuario.id === usuario.id)) {
             control = 1
         }
     }
@@ -43,6 +44,7 @@ formDom.addEventListener('submit', (e) =>{
     e.preventDefault()
 
     let ID = Math.floor(Math.random() * 100000)
+    let Cliente= "no"
     let Nombre = document.querySelector('[name=Nombre]').value
     let Apellido = document.querySelector('[name=Apellido]').value
     let RazonSocial = document.querySelector('[name=RazonSocial').value
@@ -54,15 +56,29 @@ formDom.addEventListener('submit', (e) =>{
 
     let TipoDoc = document.querySelector('[name=TipoDoc]')
     TipoDoc=TipoDoc.options[TipoDoc.selectedIndex].text
-    let TipoDocNum = document.querySelector('[name=dni]').value
+    let DocNum = document.querySelector('[name=dni]').value
     
-    TipoDocNum=parseInt(TipoDocNum)
-    if (TipoDocNum < 0 || TipoDocNum > 99999999 || isNaN(TipoDocNum)) {
+    DocNum=parseInt(DocNum)
+    if (DocNum < 0 || DocNum > 99999999 || isNaN(DocNum)) {
         console.log("documento invalido") //colocar error en el documento
       return
     }
 
-    let Fecha = document.querySelector('[name=Fecha]').value
+    let Fecha = document.querySelector("[name=Fecha]").value
+    Fecha= new Date(Fecha)
+     y = Fecha.getFullYear()
+    let Fechaact = new Date()
+    yac = Fechaact.getFullYear()
+    let dias= yac-y
+    dias= dias*365
+    if (dias > 6570) {
+        console.log( "es mayor de 18 todo ok ")
+        Fecha = document.querySelector("[name=Fecha]").value
+    }else{
+        console.log( " Eres menor de edad dirigete a una sucursal con un mayor")
+        return
+    }
+
     let Email = document.querySelector('[name=Email]').value
     let ConfEmail = document.querySelector('[name=ConfEmail]').value
     
@@ -80,7 +96,7 @@ formDom.addEventListener('submit', (e) =>{
       }
     let Credito = 0
 
-    generarUsuario (ID, Nombre,Apellido,RazonSocial,TipoDoc,TipoDocNum,Fecha,Email,ConfEmail,Passw,ConfPassw,Credito)
+    generarUsuario (ID, Cliente, Nombre,Apellido,RazonSocial,TipoDoc,DocNum,Fecha,Email,ConfEmail,Passw,ConfPassw,Credito)
     formDom.reset()
 })
 
