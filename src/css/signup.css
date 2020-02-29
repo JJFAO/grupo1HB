@@ -137,4 +137,22 @@
     .cancelbtn, .signupbtn {
        width: 100%;
     }
+  } 
+
+  @media screen and (max-width: 479px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+
+    .fechanac{
+      font-size: 0.6em;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+
+    .boxtipo{
+      font-size: 0.8em;
+      padding-left: 5px;
+    }
+
   }
