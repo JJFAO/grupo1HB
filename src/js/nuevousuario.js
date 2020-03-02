@@ -1,9 +1,39 @@
-const formDom = document.querySelector('#formulario')
+const formNewDom = document.querySelector('#formularioRegistro')
 
-const generarUsuario = (ID, Cliente, Nombre, Apellido, RazonSocial, TipoDoc, DocNum , Fecha, Email, ConfEmail, Passw, ConfPassw, Credito) => {
+
+let Usuarios = JSON.parse(localStorage.getItem('Usuarios'))
+
+if (Usuarios === null) {
+    Usuarios=[]
+    let admin = {
+        id: 0,
+        admin: 1,
+        cliente: "Administrador",
+        nombre: "Andres",
+        apellido: "Perlo",
+        razonSocial: 20202020,
+        tipoDoc: "DNI",
+        docNum: 20202020,
+        fecha: "1982-03-15",
+        email: "a@a",
+        confEmail: "a@a",
+        passw: "rolling",
+        confPassw: "rolling",
+        credito: 0
+    }
+    Usuarios.push(admin)
+    localStorage.setItem('Usuarios', JSON.stringify(Usuarios))
+
+    console.log("se creo admin")
+}
+
+
+
+const generarUsuario = (ID, Admin, Cliente, Nombre, Apellido, RazonSocial, TipoDoc, DocNum , Fecha, Email, ConfEmail, Passw, ConfPassw, Credito) => {
     let usuario = {
         id: ID,
-        clienete: Cliente,
+        admin: Admin,
+        cliente: Cliente,
         nombre: Nombre,
         apellido: Apellido,
         razonSocial: RazonSocial,
@@ -21,7 +51,7 @@ const generarUsuario = (ID, Cliente, Nombre, Apellido, RazonSocial, TipoDoc, Doc
 
 const agregarUsuario = (usuario) => {
 
-    const Usuarios = JSON.parse(localStorage.getItem('Usuarios')) || []
+    Usuarios = JSON.parse(localStorage.getItem('Usuarios'))
     //control(usurios)
     let control = 0
     for (let i = 0; i < Usuarios.length; i++) {
@@ -40,11 +70,12 @@ const agregarUsuario = (usuario) => {
 }
 //eventos
 
-formDom.addEventListener('submit', (e) =>{
+formNewDom.addEventListener('submit', (e) =>{
     e.preventDefault()
 
     let ID = Math.floor(Math.random() * 100000)
     let Cliente= "no"
+    let Admin=0
     let Nombre = document.querySelector('[name=Nombre]').value
     let Apellido = document.querySelector('[name=Apellido]').value
     let RazonSocial = document.querySelector('[name=RazonSocial').value
@@ -69,10 +100,8 @@ formDom.addEventListener('submit', (e) =>{
      y = Fecha.getFullYear()
     let Fechaact = new Date()
     yac = Fechaact.getFullYear()
-    let dias= yac-y
-    dias= dias*365
-    if (dias > 6570) {
-        console.log( "es mayor de 18 todo ok ")
+    let mayor= yac-y
+    if (mayor >= 18) {
         Fecha = document.querySelector("[name=Fecha]").value
     }else{
         console.log( " Eres menor de edad dirigete a una sucursal con un mayor")
@@ -96,7 +125,7 @@ formDom.addEventListener('submit', (e) =>{
       }
     let Credito = 0
 
-    generarUsuario (ID, Cliente, Nombre,Apellido,RazonSocial,TipoDoc,DocNum,Fecha,Email,ConfEmail,Passw,ConfPassw,Credito)
-    formDom.reset()
+    generarUsuario (ID, Admin, Cliente, Nombre,Apellido,RazonSocial,TipoDoc,DocNum,Fecha,Email,ConfEmail,Passw,ConfPassw,Credito)
+    formNewDom.reset()
 })
 
