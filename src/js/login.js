@@ -3,7 +3,6 @@ function openTab(evt, tabName) {
     let i, tabcontent, tablinks, triangle1;
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
-    console.log(tabcontent)
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
