@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/usuario.css">
+    <link rel="stylesheet" href="src/css/animate.css">
+    <script src="src/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <nav class="backgroundnav navbar navbar-expand-lg">
+                <div class="d-flex">
+                    <div>
+                        <a href="usuarios.html"> <img class="d-none d-md-block imagen mr-3"
+                                src="assets/imagenes/1581116938497.png" alt=""></a>
+
+                    </div>
+                    <div class="logo d-none d-md-block">
+                        <a href="usuarios.html">
+                            <h1 class="h1color d-md-block d-sm-block">Rolling Bank</h1>
+                            <h6 class="h6color d-none d-md-block">Donde quiera que estés</h6>
+                        </a>
+                    </div>
+                    <div class="logo d-md-none d-sm-block">
+                        <a href="cuenta.html">
+                            <h1 class="h1color">Rolling Bank</h1>
+                            <h6 class="h6color d-none d-md-block">Donde quiera que estés</h6>
+                        </a>
+                    </div>
+                </div>
+                <button class="px-2 icono navbar-toggler d-md-none d-sm-flex navbar navbar-light border border-xlight"
+                    type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class=" navbar-toggler-icon "></span>
+                </button>
+                <div class=" d-flex justify-content-around listageneral collapse navbar-collapse mx-3"
+                    id="navbarTogglerDemo01">
+                    <div class=" listageneral collapse navbar-collapse mx-3" id="navbarTogglerDemo01">
+                        <ul class="navbar-nav">
+                            <li class="nav-item d-none d-md-block"><a class="nav-link" href="usuarios.html">Inicio</a></li>
+                            <li class="nav-item d-md-none d-sm-block"><a class="nav-link" href="cuenta.html">Cuentas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="tarjetas.html">Tarjetas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="prestamos.html">Prestamos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="beneficios.html">Beneficios</a></li>
+                            <li class="nav-item d-md-none d-sm-block"><a class="nav-link" href="index.html">Salir</a></li>
+                        </ul>
+                    </div>
+                    <div class="ml-auto d-none d-md-block">
+                        <div class="dropdown drop-menus">
+                            <button class="dropDownBtn btn btn-outline-dark dropdown-toggle mb-0" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                AndresPerlo007
+                            </button>
+                            <div class="dropDown-Content dropdown-menu mt-0 pt-0" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="cuenta.html">Cuenta</a>
+                                <a class="dropdown-item" href="configuracion.html">Configuracion</a>
+                                <a class="dropdown-item" href="index.html">Salir</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            <div>
+                <!-- Comienza Tarjeta Rolling Visa Internacional -->
+                <h1 class="text-center my-5">Solicitud de Tarjeta Rolling Visa Internacional</h1>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <form class="container" id="formulario">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nombre</label>
+                                <input type="text" id="nombre" class="form-control" id="exampleInputEmail1"
+                                    placeholder="Ingrese su Nombre Completo" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Apellido</label>
+                                <input type="text" id="apellido" class="form-control"
+                                    placeholder="Coloque aqui su/s Apellido/s" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Numero de Documento</label>
+                                <input type="text" id="numerodni" class="form-control" id="exampleInputEmail1"
+                                    placeholder="Numero de DNI" aria-describedby="emailHelp">
+                            </div>
+                            <div>
+                                <div class="d-flex">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="exampleInputPassword1">Fecha de Nacimiento</label>
+                                                    <div class="d-flex">
+                                                        <div class="col-md-2">
+                                                            <input type="text" id="dia" class="form-control"
+                                                                placeholder="DIA" id="exampleInputPassword1">
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <input type="text" id="mes" class="form-control"
+                                                                placeholder="MES" id="exampleInputPassword1">
+                                                        </div>
+                                                        <div class="col-md-3 text-center">
+                                                            <input type="text" id="año" class="form-control"
+                                                                placeholder="AÑO" id="exampleInputPassword1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group col-md-3 col-sm-12">
+                                                    <label for="exampleInputEmail1">Genero</label>
+                                                    <div class="d-flex">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="customRadio1" name="customRadio"
+                                                                class="custom-control-input">
+                                                            <label class="custom-control-label"
+                                                                for="customRadio1">Masculino</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio mx-5">
+                                                            <input type="radio" id="customRadio2" name="customRadio"
+                                                                class="custom-control-input">
+                                                            <label class="custom-control-label"
+                                                                for="customRadio2">Femenino</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="exampleInputPassword1">Ingreso Neto Mensuales</label>
+                                                <div>
+                                                    <input type="text" id="ingresomensual" class="form-control"
+                                                        placeholder="Por Ej: $25.000" id="exampleInputPassword1">
+                                                </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div>
+                                                <label for="exampleInputPassword1">Motivo</label>
+                                                <input type="text" id="motivo" class="form-control"
+                                                    placeholder="Motivo de la solicitud. Por Ej: Robo, Extravio, etc"
+                                                    id="exampleInputPassword1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container py-3">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group  col-12">
+                                                <label for="exampleInputPassword1">Email</label>
+                                                <input type="email" id="email" class="form-control"
+                                                    placeholder="Email@ejemplo.com" id="exampleInputPassword1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-12">
+                                            <div class="">
+                                                <label for="exampleInputPassword1">Celular</label>
+                                                <input type="text" id="celular" class="form-control"
+                                                    placeholder="123 456 7890" id="exampleInputPassword1">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="col-12">
+                                                <label for="exampleInputPassword1">Operadora</label>
+                                                <input type="text" id="operadora" class="form-control"
+                                                    placeholder="Operadora: Claro, Personal, etc"
+                                                    id="exampleInputPassword1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="d-flex justify-content-center">
+                                <button type="submit"
+                                    class=" btn btn-outline-primary col-9 py-3 mb-5 mt-3 rounded-pill">
+                                    <h1>Continuar</h1>
+                                </button>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+    </header>
+
+    <footer class="py-5 bg-dark navbar-dark text-white text-center wow lightSpeedIn">
+        <h1>Aqui va el futuro Footer mamilas</h1>
+    </footer>
+
+    <script src="src/js/tarjetaRollingVisaInt.js"></script>
+    <script src="https://kit.fontawesome.com/f40d0764a0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
