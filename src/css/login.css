@@ -11,7 +11,7 @@ body {
 /* Side left */
 
 .left-container {
-    background: #2D2D44; 
+    background: linear-gradient(125deg,#70e1ee, #2D2D44, #1E1E2C); 
     margin-bottom: -56px;
 }
 
@@ -71,8 +71,8 @@ body {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: rgba(221, 221, 221, 0.11);
-    border-radius: 5%;
+    background-color: rgba(221, 221, 221, 0.03);
+    border-radius: 40%;
 }
 
 /* Create a active "tab button" class */
@@ -142,6 +142,22 @@ body {
     font-size: 2em;
     color: #ffffff;
     margin: 5px;
+}
+
+/* Boton ir empresa */
+
+.ir-empresa {
+    display: inline-block;
+    padding: 16px;
+    background-color: #2D2D44;
+    color: #ffffff;
+    font-size: 23px;
+    max-width: 71px;
+    border-radius: 33% 5%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 50px
 }
 
 
@@ -232,14 +248,14 @@ body {
     transition: 0.5s;
 }
 
-/* Esta es la sombra del login */
+/* This is shadow login */
 .form-box button[type="submit"]:hover {
     -webkit-box-shadow: 0px 13px 17px -4px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 13px 17px -4px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 13px 17px -4px rgba(0, 0, 0, 0.75);
 }
 
-/* Este es el color del olvide la contraseña */
+/* This is color of "olvide la contraseña" */
 .forget-link,
 .register-link {
     color: #ffffff;
@@ -257,4 +273,61 @@ body {
     font-size: 1.3em;
 }
 
+/* Button go to persona-empresa */
 
+.ir-empresa, .ir-persona {
+    display: inline-block;
+    padding: 20px;
+    background-color: #2D2D44;
+    color: #ffffff;
+    font-size: 23px;
+    max-width: 71px;
+    border-radius: 33% 5%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 15px
+}
+
+@media screen and (max-width: 538px) {
+    .ir-empresa  {
+        display: inline-block;
+        padding: 13px;
+        background-color: #2D2D44;
+        color: #ffffff;
+        font-size: 20px;
+        max-width: 70px;
+        border-radius: 33% 5%;
+        cursor: pointer;
+        position: absolute;
+        bottom: -29px;
+        right: 36vw
+    }
+
+    .ir-persona{
+        display: inline-block;
+        padding: 13px;
+        background-color: #2D2D44;
+        color: #ffffff;
+        font-size: 20px;
+        max-width: 70px;
+        border-radius: 33% 5%;
+        cursor: pointer;
+        position: absolute;
+        bottom: -76px;
+        right: 42vw
+    }
+  }
+
+  @media screen and (max-width: 321px) {
+    .form-box button[type="submit"] {
+    width: 130px;
+    height: 40px;
+    }
+  }
+
+  @media screen and (max-width: 888px) {
+  .img-logo {
+    display:none;
+  }
+}

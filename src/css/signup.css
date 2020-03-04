@@ -43,7 +43,7 @@
     cursor: pointer;
     width: 90%;
     opacity: 0.9;
-    transition: 0.5s;  
+    transition: 0.2s;  
       background-color: #2D2D44;
        color: #ffffff;
       font-weight: bold;
@@ -111,16 +111,8 @@
     padding-top: 10px;
     border-radius: 5px;
 }
-  /* The Close Button (x) */
-  .close {
-    position: absolute;
-    right: 35px;
-    top: 15px;
-  }
-  
-  
-  
-  /* checked boton*/
+
+      /* checked boton*/
   .modal input[type="checkbox"]:not(:checked)+label:before {
       background: transparent;
       border: 2px solid #1E1E2C;
