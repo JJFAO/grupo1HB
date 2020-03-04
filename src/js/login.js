@@ -51,4 +51,3 @@ formLoginDom.addEventListener('submit', (e) => {
     buscarUsuario(Nombre, Passw)
     formLoginDom.reset()
 })
-
