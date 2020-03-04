@@ -1,0 +1,131 @@
+const formNewDom = document.querySelector('#formularioRegistro')
+
+
+let Usuarios = JSON.parse(localStorage.getItem('Usuarios'))
+
+if (Usuarios === null) {
+    Usuarios=[]
+    let admin = {
+        id: 0,
+        admin: 1,
+        cliente: "Administrador",
+        nombre: "Andres",
+        apellido: "Perlo",
+        razonSocial: 20202020,
+        tipoDoc: "DNI",
+        docNum: 20202020,
+        fecha: "1982-03-15",
+        email: "a@a",
+        confEmail: "a@a",
+        passw: "rolling",
+        confPassw: "rolling",
+        credito: 0
+    }
+    Usuarios.push(admin)
+    localStorage.setItem('Usuarios', JSON.stringify(Usuarios))
+
+    console.log("se creo admin")
+}
+
+
+
+const generarUsuario = (ID, Admin, Cliente, Nombre, Apellido, RazonSocial, TipoDoc, DocNum , Fecha, Email, ConfEmail, Passw, ConfPassw, Credito) => {
+    let usuario = {
+        id: ID,
+        admin: Admin,
+        cliente: Cliente,
+        nombre: Nombre,
+        apellido: Apellido,
+        razonSocial: RazonSocial,
+        tipoDoc: TipoDoc,
+        docNum: DocNum,
+        fecha: Fecha,
+        email: Email,
+        confEmail: ConfEmail,
+        passw: Passw,
+        confPassw: ConfPassw,
+        credito: Credito
+    }
+    agregarUsuario(usuario)
+}
+
+const agregarUsuario = (usuario) => {
+
+    Usuarios = JSON.parse(localStorage.getItem('Usuarios'))
+    //control(usurios)
+    let control = 0
+    for (let i = 0; i < Usuarios.length; i++) {
+        const Usuario = Usuarios[i];
+        if ((Usuario.docNum === usuario.docNum) || (Usuario.id === usuario.id)) {
+            control = 1
+        }
+    }
+    if (control === 0) {
+        Usuarios.push(usuario)
+        localStorage.setItem('Usuarios', JSON.stringify(Usuarios))
+        console.log("Se agrego un usuario")
+    } else {
+        console.log("el usuario ya existe")
+    }
+}
+//eventos
+
+formNewDom.addEventListener('submit', (e) =>{
+    e.preventDefault()
+
+    let ID = Math.floor(Math.random() * 100000)
+    let Cliente= "no"
+    let Admin=0
+    let Nombre = document.querySelector('[name=Nombre]').value
+    let Apellido = document.querySelector('[name=Apellido]').value
+    let RazonSocial = document.querySelector('[name=RazonSocial').value
+
+    if (RazonSocial < 0 || RazonSocial > 99999999) {
+        console.log("razonSocial invalida") //colocar error razonsocial
+      return
+    }
+
+    let TipoDoc = document.querySelector('[name=TipoDoc]')
+    TipoDoc=TipoDoc.options[TipoDoc.selectedIndex].text
+    let DocNum = document.querySelector('[name=dni]').value
+    
+    DocNum=parseInt(DocNum)
+    if (DocNum < 0 || DocNum > 99999999 || isNaN(DocNum)) {
+        console.log("documento invalido") //colocar error en el documento
+      return
+    }
+
+    let Fecha = document.querySelector("[name=Fecha]").value
+    Fecha= new Date(Fecha)
+     y = Fecha.getFullYear()
+    let Fechaact = new Date()
+    yac = Fechaact.getFullYear()
+    let mayor= yac-y
+    if (mayor >= 18) {
+        Fecha = document.querySelector("[name=Fecha]").value
+    }else{
+        console.log( " Eres menor de edad dirigete a una sucursal con un mayor")
+        return
+    }
+
+    let Email = document.querySelector('[name=Email]').value
+    let ConfEmail = document.querySelector('[name=ConfEmail]').value
+    
+    if (Email != ConfEmail) {
+        console.log("email diferentes") //colocar error en mails
+      return
+    }
+
+    let Passw = document.querySelector('[name=Passw]').value
+    let ConfPassw = document.querySelector('[name=ConfPassw]').value
+    
+    if (Passw != ConfPassw) {
+        console.log("paswords diferentes") // colocar error en paswords
+        return
+      }
+    let Credito = 0
+
+    generarUsuario (ID, Admin, Cliente, Nombre,Apellido,RazonSocial,TipoDoc,DocNum,Fecha,Email,ConfEmail,Passw,ConfPassw,Credito)
+    formNewDom.reset()
+})
+
