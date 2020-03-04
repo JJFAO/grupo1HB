@@ -1,5 +1,5 @@
 const formNewDom = document.querySelector('#formularioRegistro')
-
+console.log(formNewDom)
 
 let Usuarios = JSON.parse(localStorage.getItem('Usuarios'))
 
@@ -76,18 +76,18 @@ formNewDom.addEventListener('submit', (e) =>{
     let ID = Math.floor(Math.random() * 100000)
     let Cliente= "no"
     let Admin=0
-    let Nombre = document.querySelector('[name=Nombre]').value
-    let Apellido = document.querySelector('[name=Apellido]').value
-    let RazonSocial = document.querySelector('[name=RazonSocial').value
+    let Nombre = formNewDom.querySelector('[name=Nombre]').value
+    let Apellido = formNewDom.querySelector('[name=Apellido]').value
+    let RazonSocial = formNewDom.querySelector('[name=RazonSocial').value
 
     if (RazonSocial < 0 || RazonSocial > 99999999) {
         console.log("razonSocial invalida") //colocar error razonsocial
       return
     }
 
-    let TipoDoc = document.querySelector('[name=TipoDoc]')
+    let TipoDoc = formNewDom.querySelector('[name=TipoDoc]')
     TipoDoc=TipoDoc.options[TipoDoc.selectedIndex].text
-    let DocNum = document.querySelector('[name=dni]').value
+    let DocNum = formNewDom.querySelector('[name=dni]').value
     
     DocNum=parseInt(DocNum)
     if (DocNum < 0 || DocNum > 99999999 || isNaN(DocNum)) {
@@ -95,29 +95,29 @@ formNewDom.addEventListener('submit', (e) =>{
       return
     }
 
-    let Fecha = document.querySelector("[name=Fecha]").value
+    let Fecha = formNewDom.querySelector("[name=Fecha]").value
     Fecha= new Date(Fecha)
      y = Fecha.getFullYear()
     let Fechaact = new Date()
     yac = Fechaact.getFullYear()
     let mayor= yac-y
     if (mayor >= 18) {
-        Fecha = document.querySelector("[name=Fecha]").value
+        Fecha = formNewDom.querySelector("[name=Fecha]").value
     }else{
         console.log( " Eres menor de edad dirigete a una sucursal con un mayor")
         return
     }
 
-    let Email = document.querySelector('[name=Email]').value
-    let ConfEmail = document.querySelector('[name=ConfEmail]').value
+    let Email = formNewDom.querySelector('[name=Email]').value
+    let ConfEmail = formNewDom.querySelector('[name=ConfEmail]').value
     
     if (Email != ConfEmail) {
         console.log("email diferentes") //colocar error en mails
       return
     }
 
-    let Passw = document.querySelector('[name=Passw]').value
-    let ConfPassw = document.querySelector('[name=ConfPassw]').value
+    let Passw = formNewDom.querySelector('[name=Passw]').value
+    let ConfPassw = formNewDom.querySelector('[name=ConfPassw]').value
     
     if (Passw != ConfPassw) {
         console.log("paswords diferentes") // colocar error en paswords
