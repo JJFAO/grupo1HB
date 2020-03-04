@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/login.css">
+    <link rel="stylesheet" href="src/css/signup.css">
+    <script src="https://kit.fontawesome.com/2d93d83a15.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&display=swap"
+        rel="stylesheet">
+    <title>RollingBank</title>
+</head>
+<body> ​
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Este es el lado izquierdo -->
+            <div class="col-lg-6 col-md-6 d-none d-md-block left-container">
+                <!-- Este es el Logo -->
+                <div class="div-logo py-5">
+                    <a class="link-logo d-flex justify-content-center"
+                        href="https://www.bancociudad.com.ar/autogestion/" target="blank">
+                        <h1 class="title-logo">RollingBank</h1>
+                        <img class="img-logo" src="./assets/img/logoBlanco.svg" alt="logo">
+                    </a>
+                </div>               ​
+                <!-- Fin del logo -->                ​
+                <!-- Este es el main -->
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'Personas')" id="defaultOpen">
+                        <span class="selector"> Personas </span>
+                        <i class="fas fa-user-friends"></i>
+                        <div class="triangle-left triangle1"></div>
+                    </button>
+                    <button class="tablinks" onclick="openTab(event, 'Empresas')">
+                        <span class="selector"> Empresas </span>
+                        <i class="fas fa-city"></i>
+                        <div class="triangle-right triangle1"></div> ​
+                    </button>
+                </div>
+                <!-- Fin del main -->                ​
+                <!-- Redes Sociales -->
+                ​<div class="social-media d-flex justify-content-between align-content-end align-items-center m-3">
+                    <p>Rolling Bank | Copyright ® 2020. Todos los derechos reservados.</p>
+                    <div class="icon-media">
+                        <a href=""><i class="fab fa-facebook-square"></i></a>
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <a href=""><i class="fab fa-instagram-square"></i></a>
+                        <a href=""><i class="fab fa-youtube-square"></i></a>
+                    </div>
+                </div>
+                <!-- Fin redes sociales -->                ​
+            </div>
+            <!-- Este es el lado derecho -->​
+            <div class="col-lg-6 col-md-6 form-container">​
+                <div class="col-lg-8 col-md-12 col-sm-9 col-xs-12 form-box text-center">
+                    <!-- Autogestion Personas -->
+                    <div id="Personas" class="tabcontent">
+                        <div class="heading mt-2 mb-5">
+                            <span class="font-weight-light subtitle-form">Autogestión</span>
+                            <span class="font-weight-bold title-form">Personas</span>
+                            <h4 class="font-weight-light">Solicitá tus productos en linea, fácil y rapido.</h4>
+                        </div>
+                        <!-- Este es el formulario -->
+                        <form id="formulariolog">
+                            <span class="ir-empresa fas fa-city tablinks d-md-none" onclick="openTab(event, 'Empresas')" id="defaultOpen" alt="Ir a Empresas"></span>
+                            <div class="form-input">
+                                <span><i class="far fa-user"></i></span>
+                                <input type="email" placeholder="Ingresa tu Usuario" name="Nombre" required>
+                            </div>
+                            <div class="form-input">
+                                <span><i class="fa fa-lock"></i></span>
+                                <input type="password" placeholder="Ingresa tu Clave" name="Passw" required>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-6 d-flex">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="cbl">
+                                        <label class="custom-control-label text-white" for="cbl">Recordar
+                                            Usuario</label>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <a href=# class="forget-link">Olvidé mi contraseña</a>
+                                </div>
+                            </div>​
+                            <!-- Botones de registro y login -->
+                            <div class="row">​
+                                <div class="col-6 btn-social">
+                                    <button type="submit" class="btn">Ingresar</button>
+                                </div>
+                                <div class="col-6 btn-social">
+                                    <button type="submit" class="btn" data-toggle="modal" data-target="#exampleModalCenter">Registrarme</button>
+                                </div>
+                            </div>​
+                        </form>                        
+                    </div>​
+                    
+                    <!-- Autogestion Empresas -->
+                    <div id="Empresas" class="tabcontent">
+                        <div class="heading mt-2 mb-5 ">
+                            <span class="font-weight-light subtitle-form">Autogestión</span>
+                            <span class="font-weight-bold title-form">Empresas</span>
+                            <h4 class="font-weight-light">Solicitá tus productos en línea.</h4>
+                            <h4 class="font-weight-light">Operá en comercio exterior.</h4>
+                            <h4 class="font-weight-light">Facilitá todas tus gestiones y ganá tiempo.</h4>
+                        </div>
+                        <!-- Este es el formulario -->
+                        <form>
+                            <span class="ir-persona fas fa-user-friends tablinks d-md-none" onclick="openTab(event, 'Personas')" alt="Ir a Personas"></span>
+                            <div class="form-input">
+                                <span><i class="fas fa-fingerprint"></i></span>
+                                <input type="text" placeholder="Ingresa CUIT" required>
+                            </div>
+                            <div class="form-input">
+                                <span><i class="far fa-user"></i></span>
+                                <input type="email" placeholder="Ingresa Usuario" required>
+                            </div>
+                            <div class="form-input">
+                                <span><i class="fa fa-lock"></i></span>
+                                <input type="password" placeholder="Ingresa Clave" required>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-6 d-flex">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="cbl2">
+                                        <label class="custom-control-label text-white" for="cbl2">Recordar
+                                            Usuario</label>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <a href="#" class="forget-link">Olvidé mi contraseña</a>
+                                </div>
+                            </div>​
+                            <!-- Botones de registro y login -->
+                            <div class="row">​
+                                <div class="col-6 btn-social">
+                                    <button type="submit" class="btn">Ingresar</button>
+                                </div>
+                                <div class="col-6 btn-social">
+                                    <button type="submit" class="btn" data-toggle="modal" data-target="#exampleModalCenter">Registrarme</button>
+                                </div>
+                            </div>                           
+                        </form>                        
+                    </div>
+                    <!-- Fin contenedor responsive -->
+                </div>
+            </div>​
+        </div> ​
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="signup"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content ">
+                <form class="containermodal" id="formularioRegistro">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    <h1 class="title-logo display-3 pr-2 text-center">RollingBank</h1>
+                    <p class="lead text-center">Donde quiera que estes</p>
+                    <h4 class="text-left text-uppercase">Obtené tu cuenta ahora</h4>
+                    <h5 class="text-left">Completa los datos</h5>
+                    <hr>
+                    <label class="sr-only" for="nombre">Nombre</label>
+                    <input type="text" placeholder="Ingresa tu nombre" name="Nombre" required>
+                    <label class="sr-only" for="nombre">Apellido</label>
+                    <input type="text" placeholder="Ingresa tu Apellido" name="Apellido" required>
+                    <label class="sr-only" for="nombre">Razon Social</label>
+                    <input type="text" placeholder="Razon Social" name="RazonSocial" required>
+                    <div class="d-flex flex-nowrap align-items-center  justify-content-between">
+                            <select class="w-25 boxtipo" name="TipoDoc">
+                                <option selected>Tipo</option>
+                                <option value="1">DNI</option>
+                                <option value="2">CUIL</option>
+                                <option value="3">CUIT</option>
+                                <option value="3">PASAPORTE</option>
+                            </select>
+                        <div class="w-75 h-100 pr-0 pl-2">
+                            <label class="sr-only" for="inlineFormInputGroup">Documento Nº</label>
+                            <input type="text" class="" id="inlineFormInputGroup" placeholder="Numero" name="dni">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between ">
+                        <div class="w-25 fecha">
+                            <label class="fechanac" for="start">Fecha de Nacimiento:</label>
+                        </div>
+                        <div class="w-75 ">
+                            <input type="date" id="start" name="Fecha" value="2020-07-22" min="1900-01-01"
+                                max="2020-12-31">
+                        </div>
+                    </div>
+                    <label class="sr-only" for="email">Email</label>
+                    <input type="email" placeholder="Ingresa tu Email" name="Email" required>
+                    <label class="sr-only" for="email">Confirmar Email</label>
+                    <input type="email" placeholder="Confirma tu Email" name="ConfEmail" required>
+                    <label class="sr-only" for="psw">Ingresa tu contraseña</label>
+                    <input type="password" placeholder="Ingresa tu contraseña" name="Passw" required>
+                    <label class="sr-only" for="psw-repeat">Repetir contraseña</label>
+                    <input type="password" placeholder="Repetir contraseña" name="ConfPassw" required>                    
+                    <p>Al crear tu cuenta, estas aceptando nuestros <a href="termycond.html" target="_blanck">Terminos y Condiciones</a>.</p>
+                    <div class="clearfix mb-4 mt-4">
+                        <button type="button" class="cancelbtn" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="signupbtn">Registrarme</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    ​
+
+    ​
+    <!-- JS -->
+    <script src="src\js\login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    ​
+</body>​
+
+</html>

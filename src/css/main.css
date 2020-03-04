@@ -1,0 +1,53 @@
+
+.main{
+    background-color: #2d2d44;
+}
+.btn-bank{
+    background-color: #33e1ed;
+    font-size: 2rem;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.btn-bank a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.iconos{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+@media (min-width: 768px) {
+    .btn-bank{
+        width: auto;
+    }
+}
+/*contact form*/
+.maintitle{
+   font-size: 2.5em;
+   color: #2d2d44;
+   padding: 1.2rem;
+}
+.contact{
+    background-color: #33e1ed;    
+}
+.btn-sub{
+    background-color: #1e1e2c;
+    color:#ffffff ;
+    font-size: 20px;
+}
+.btn-sub:hover{
+    color: white;
+    box-shadow: 0px 13px 10px -4px rgba(0, 0, 0, 0.507);
+
+}
+.borderbox:hover{
+    box-shadow: 0px 13px 10px -4px rgba(0, 0, 0, 0.507);
+}
+.centrar div{
+    justify-content: center;
+}
+.centrar{
+    width: 80%;
+}
+
