@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.offer {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  -webkit-box-shadow: 3px 3px 11px 2px #000000;
+  box-shadow: 3px 3px 11px 2px #000000;
+}
+
+.offer h5 {
+  margin-bottom: 2.75rem;
+  text-align: center !important;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.offer a {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(51, 224, 237, 0.137);
+  font-weight: 300;
+}
+
+.offer a:hover {
+  background-color: rgba(51, 225, 237, 0.7);
+  color: black;
+}
+
+.trans {
+  opacity: .7;
+}
+
+.imgOffer1 {
+  background-image: url(../../assets/img/master-card-visa-credit-card-gold.jpg);
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+
+.imgOffer2 {
+  background-image: url(../../assets/img/rolling.jpg);
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+
+.imgOffer3 {
+  background-image: url(../../assets/img/white-and-brown-concrete-bungalow-under-clear-blue.jpg);
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+
+.imgOffer4 {
+  background-image: url(../../assets/img/woman-holding-card-with-macbook-air-on-lap.jpg);
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+
+.imgOffer5 {
+  background-image: url(../../assets/img/group-of-people-standing-on-beach-shore-1427741.jpg);
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+
+.imgOffer6 {
+  background-image: url(../../assets/img/food-dinner-lunch-unhealthy.jpg);
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+.circulo li{
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
+}
