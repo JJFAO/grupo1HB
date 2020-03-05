@@ -1,0 +1,38 @@
+.btn{
+    background: #33E1ED;
+    -webkit-box-shadow: 32px 25px 45px 0px #000000; 
+     box-shadow: 32px 25px 45px 0px #000000;
+    
+}
+
+.fa-times-circle-o{
+
+    
+   color: red;
+   
+   border-radius: 50%;
+ 
+}
+
+.fa-check-circle-o{
+    color: green;
+    
+    border-radius: 50%;
+    
+  
+}
+.modal-body{
+    background: #1E1E2C;
+}
+.modal-footer{
+    background: #1E1E2C;
+}
+.modal-body p{
+    color: white;
+}
+.modal-footer {
+    border-top: #1E1E2C;
+}
+.close{
+    color: white;
+}

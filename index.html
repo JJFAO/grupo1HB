@@ -2,63 +2,306 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="src/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/index.css">
+  <link rel="stylesheet" href="src/css/main.css">
+  <link rel="stylesheet" href="src/css/footer.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/f40d0764a0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <div>
-            <nav class="backgroundnav navbar navbar-expand-lg">
-                <div class="d-flex">
-                    <div>
-                        <a href="index.html"> <img class="d-none d-md-block imagen mr-3" src="assets/imagenes/1581116938497.png" alt=""></a>
-                      
-                    </div>
-                    <div class="logo">
-                        <a  href="index.html">
-                        <h1 class="h1color">Rolling Bank</h1>
-                        <h6 class="h6color d-none d-md-block">Donde quiera que estés</h6>
-                        </a>
-                    </div> 
-                </div>
-                <button class="px-2 icono navbar-toggler d-md-none d-sm-flex navbar navbar-light border border-xlight" type="button" data-toggle="collapse"
-                    data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class=" navbar-toggler-icon "></span>
-                </button>
-                <div class=" listageneral collapse navbar-collapse mx-3" id="navbarTogglerDemo01">
-                    <ul class="navbar-nav">
-                        <li class="nav-item d-md-none d-sm-block"><a class="nav-link" href="cuenta.html">Ingresar <i class="fas fa-user-lock"></i></a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="">Personas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Empresa</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Conocenos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Tarjetas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Prestamos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Beneficios</a></li>
-                        <li class="nav-item d-none d-md-block"><a class="nav-link" href="usuarios.html">Ingresar <i class="fas fa-user-lock"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+  <!-- empieza navbar Andres -->
+  <header>
+    <div>
+      <nav class="backgroundnav navbar navbar-expand-lg">
+        <div class="d-flex">
+          <div>
+            <a href="index.html"> <img class="d-none d-md-block imagen mr-3" src="assets/imagenes/1581116938497.png"
+                alt=""></a>
 
-    <script src="https://kit.fontawesome.com/f40d0764a0.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+          </div>
+          <div class="logo">
+            <a href="index.html">
+              <h1 class="h1color">Rolling Bank</h1>
+              <h6 class="h6color d-none d-md-block">Donde quiera que estés</h6>
+            </a>
+          </div>
+        </div>
+        <button class="px-2 icono navbar-toggler d-md-none d-sm-flex navbar navbar-light border border-xlight"
+          type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class=" navbar-toggler-icon "></span>
+        </button>
+        <div class=" listageneral collapse navbar-collapse mx-3" id="navbarTogglerDemo01">
+          <ul class="ml-auto">
+            <li class="nav-item d-none d-md-block"><a class="nav-link" href="login.html">Ingresar <i
+                  class="fas fa-user-lock"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- termina navbarAndres -->
+
+  <section>
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators circulo">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
+      </ol>
+      <div class="carousel-inner">
+
+        <div class="carousel-item active" data-interval="5000">
+          <div class="d-block imgOffer1 trans" alt="..."></div>
+          <div class="carousel-caption d-md-block" style="text-align: left; bottom: 30%;">
+            <div class="row justify-content-center">
+              <div class="col"></div>
+              <div class="col-sm-6">
+                <div class="card offer">
+                  <div class="card-body">
+                    <h5 class="card-title">Tarjeta internacional</h5>
+                    <div class="row justify-content-start  mr-0 ml-0">
+                      <a href="#" class="btn btn-secondary ">Más información</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-interval="5000">
+          <div class="d-block imgOffer2 trans" alt="..."></div>
+          <div class="carousel-caption d-md-block" style="text-align: left; bottom: 30%;">
+            <div class="row justify-content-center">
+              <div class="col"></div>
+              <div class="col-sm-6">
+                <div class="card offer">
+                  <div class="card-body">
+                    <h5 class="card-title">Traé tu sueldo a RollingBank</h5>
+                    <div class="row justify-content-start  mr-0 ml-0">
+                      <a href="#" class="btn btn-secondary ">Más información</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-interval="5000">
+          <div class="d-block imgOffer3 trans" alt="..."></div>
+          <div class="carousel-caption d-md-block" style="text-align: left; bottom: 30%;">
+            <div class="row justify-content-center">
+              <div class="col"></div>
+              <div class="col-sm-6">
+                <div class="card offer">
+                  <div class="card-body">
+                    <h5 class="card-title">Créditos Hipotecarios</h5>
+                    <div class="row justify-content-start  mr-0 ml-0">
+                      <a href="#" class="btn btn-secondary ">Más información</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-interval="5000">
+          <div class="d-block imgOffer4" alt="..."></div>
+          <div class="carousel-caption d-md-block" style="text-align: left; bottom: 30%;">
+            <div class="row justify-content-center">
+              <div class="col"></div>
+              <div class="col-sm-6">
+                <div class="card offer">
+                  <div class="card-body">
+                    <h5 class="card-title">Pagos Online</h5>
+                    <div class="row justify-content-start  mr-0 ml-0">
+                      <a href="#" class="btn btn-secondary ">Más información</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-interval="5000">
+          <div class="d-block imgOffer5 trans" alt="..."></div>
+          <div class="carousel-caption d-md-block" style="text-align: left; bottom: 30%;">
+            <div class="row justify-content-center">
+              <div class="col"></div>
+              <div class="col-sm-6">
+                <div class="card offer">
+                  <div class="card-body">
+                    <h5 class="card-title">Vacaciones 2021</h5>
+                    <div class="row justify-content-start  mr-0 ml-0">
+                      <a href="#" class="btn btn-secondary ">Más información</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-interval="5000">
+          <div class="d-block imgOffer6 trans" alt="..."></div>
+          <div class="carousel-caption d-md-block" style="text-align: left; bottom: 30%;">
+            <div class="row justify-content-center">
+              <div class="col"></div>
+              <div class="col-sm-6">
+                <div class="card offer">
+                  <div class="card-body">
+                    <h5 class="card-title">Descuentos en gastronomía</h5>
+                    <div class="row justify-content-start  mr-0 ml-0">
+                      <a href="#" class="btn btn-secondary ">Más información</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+  <!-- This is my section products -->
+  <div class="container-fluid main d-flex justify-content-around">
+    <div class="row p-3 centrar">
+      <div class="col-lg-3 col-md-3 col-xs-12 d-flex ">
+        <button type="button" class="btn btn-bank btn-block mb-2 mt-2">
+          <a href="">
+            <i class="fas fa-user">
+              <span class="ml-2 iconos">Personas</span>
+            </i>
+          </a>
+        </button>
+      </div>
+      <div class="col-lg-3 col-md-3 col-xs-12 d-flex">
+        <button type="button" class="btn btn-bank btn-block mb-2 mt-2">
+          <a href="">
+            <i class="fas fa-industry">
+              <span class="ml-2 iconos">Empresas</span>
+            </i>
+          </a>
+        </button>
+      </div>
+      <div class="col-lg-3 col-md-3 col-xs-12 d-flex ">
+        <button type="button" class="btn btn-bank btn-block mb-2 mt-2">
+          <a href=""><i class="fas fa-credit-card">
+              <span class="ml-2 iconos">Productos</span>
+            </i>
+          </a>
+        </button>
+      </div>
+      <div class="col-lg-3 col-md-3 col-xs-12 d-flex">
+        <button type="button" class="btn btn-bank btn-block mb-2 mt-2">
+          <a href="">
+            <i class="fas fa-home">
+              <span class="ml-2 iconos">Nosotros</span>
+            </i>
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- This is the contact form -->
+  <div id="contactar" class="container-fluid contact">
+    <div>
+      <h2 class="maintitle">Contactanos</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-xs-12 mt-2">
+        <input type="text" class="form-control mb-4 p-4 borderbox" placeholder="Nombre">
+        <input type="text" class="form-control p-4 borderbox" placeholder="Apellido">
+      </div>
+      <div class="col-lg-4 col-md-6 col-xs-12 mt-2">
+        <input type="email" class="form-control mb-4 p-4 borderbox" placeholder="E-mail">
+        <input type="number" class="form-control mb-3 p-4 borderbox" placeholder="Telefono">
+      </div>
+      <div class="col-lg-4 col-md-6 col-xs-12 mt-2">
+        <div class="form-group subo">
+          <textarea class="form-control mb-2  p-3 borderbox" id="exampleFormControlTextarea1" rows="4"
+            placeholder="Ingresa tu comentario"></textarea>
+          <button type="submit" class="btn btn-sub">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Start footer-->
+  <footer class="foot">
+    <div class="redicon text-center">
+      <div class="titlefoot">
+        <h2 class="pt-5 subtitulofoot">ROLLINGBANK</h2>
+      </div>
+      <div class="iconfoot">
+        <a href="https://ar.linkedin.com/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/" target="blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/?lang=es" target="blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/" target="blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <p class="mb-1 textfoot">SMT y YB</p>
+          <p id="text-blue">381-614-5118 <i class="fas fa-phone-square ml-1"></i></p>
+          <br>
+          <p class="mb-1 textfoot">Previsional</p>
+          <p id="text-blue">0810-325-9707 <i class="fas fa-phone-square ml-1"></i></p>
+        </div>
+        <div class="col-md-6 text-center">
+          <p class="mb-1 textfoot">Hacete cliente</p>
+          <p id="text-blue">0810-325-9708 <i class="fas fa-phone-square ml-1"></i></p>
+          <br>
+          <p class="mb-1 textfoot">¿Podemos ayudarte?</p>
+          <a href="#contactar" class="text-decoration-none">
+            <p id="text-blue">Escribinos <i class="far fa-edit ml-1"></i></p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="lead text-white pt-5 pb-4 text-center copyfoot">RollingBank | Copyright ® 2020. Todos los derechos
+      reservados.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
