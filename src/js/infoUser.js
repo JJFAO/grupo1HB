@@ -8,7 +8,7 @@ let agregarEmail = document.querySelector("#email")
 
 
 let Usuario = JSON.parse(localStorage.getItem('usuarioLoggeado'));
-botonUsuario.innerHTML = Usuario.nombre + Usuario.apellido;
+botonUsuario.innerHTML = Usuario.nombre + " " + Usuario.apellido;
 agregarNombre.value = Usuario.nombre;
 agregarApellido.value = Usuario.apellido;
 agregarDNI.value = Usuario.dni;

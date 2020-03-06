@@ -6,7 +6,7 @@ let Usuarios = JSON.parse(localStorage.getItem('Usuarios'))
 if (Usuarios === null) {
     Usuarios=[]
     let admin = {
-        id: 0,
+        id: 777,
         admin: 1,
         cliente: "Administrador",
         nombre: "Andres",
@@ -20,7 +20,7 @@ if (Usuarios === null) {
         confEmail: "a@a",
         passw: "rolling",
         confPassw: "rolling",
-        credito: 0
+        credito: 10000000
     }
     Usuarios.push(admin)
     localStorage.setItem('Usuarios', JSON.stringify(Usuarios))
