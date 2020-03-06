@@ -42,7 +42,7 @@ const buscarUsuario = (nombre, passw) => {
     const Usuarios = JSON.parse(localStorage.getItem('Usuarios'))
 
     if (Usuarios == null) {
-        console.log("no hay usuarios")
+        mostrarMensajeError("No hay usuarios")
     } else {
         for (let i = 0; i < Usuarios.length; i++) {
             const Usuario = Usuarios[i];
@@ -62,7 +62,7 @@ const buscarUsuario = (nombre, passw) => {
         } else  if (encontrado == 2) {
             imprimir(admin)
         }else{
-            console.log("usuario o pasword incorrecto")
+            mostrarMensajeError("Usuario o Password Incorrecto")
         }
     }
 }

@@ -81,7 +81,8 @@ formNewDom.addEventListener('submit', (e) =>{
     let RazonSocial = formNewDom.querySelector('[name=RazonSocial').value
 
     if (RazonSocial < 0 || RazonSocial > 99999999) {
-        console.log("razonSocial invalida") //colocar error razonsocial
+        //console.log("razonSocial invalida") //colocar error razonsocial
+        mostrarMensajeError("Razón Social Inválida.")
       return
     }
 
@@ -91,7 +92,8 @@ formNewDom.addEventListener('submit', (e) =>{
     
     DocNum=parseInt(DocNum)
     if (DocNum < 0 || DocNum > 99999999 || isNaN(DocNum)) {
-        console.log("documento invalido") //colocar error en el documento
+        mostrarMensajeError("Documento Invalido") //colocar error en el documento
+
       return
     }
 
@@ -104,7 +106,7 @@ formNewDom.addEventListener('submit', (e) =>{
     if (mayor >= 18) {
         Fecha = formNewDom.querySelector("[name=Fecha]").value
     }else{
-        console.log( " Eres menor de edad dirigete a una sucursal con un mayor")
+        mostrarMensajeError("Eres menor de edad acercate, a la sucursal más cercana, con un mayor de edad")
         return
     }
 
@@ -112,7 +114,7 @@ formNewDom.addEventListener('submit', (e) =>{
     let ConfEmail = formNewDom.querySelector('[name=ConfEmail]').value
     
     if (Email != ConfEmail) {
-        console.log("email diferentes") //colocar error en mails
+        mostrarMensajeError("Emails diferentes") //colocar error en mails
       return
     }
 
@@ -120,7 +122,7 @@ formNewDom.addEventListener('submit', (e) =>{
     let ConfPassw = formNewDom.querySelector('[name=ConfPassw]').value
     
     if (Passw != ConfPassw) {
-        console.log("paswords diferentes") // colocar error en paswords
+        mostrarMensajeError("Contraseñas diferentes") // colocar error en paswords
         return
       }
     let Credito = 0
