@@ -6,12 +6,14 @@ let agregarFechaNac = document.querySelector("#fechanac")
 let agregarGenero = document.querySelector("#genero")
 let agregarEmail = document.querySelector("#email")
 
+
 let Usuario = JSON.parse(localStorage.getItem('usuarioLoggeado'));
-/* const Usuarios = JSON.parse(localStorage.getItem('Usuarios')) */
 botonUsuario.innerHTML = Usuario.nombre + Usuario.apellido;
 agregarNombre.value = Usuario.nombre;
 agregarApellido.value = Usuario.apellido;
 agregarDNI.value = Usuario.dni;
 agregarFechaNac.value = Usuario.fecha;
-agregarGenero.value = Usuario.sexo
-agregarEmail.value = Usuario.email
+agregarGenero.value = Usuario.sexo;
+agregarEmail.value = Usuario.email;
+agregarCredito.value = Usuario.credito;
+console.log(Usuario.credito)

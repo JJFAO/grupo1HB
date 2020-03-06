@@ -14,7 +14,6 @@
     <script>
         new WOW().init();
     </script>
-    <script src="src/js/jquey.js"></script>
 </head>
 
 <body>
@@ -82,17 +81,15 @@
         <div class="row divrow">
             <div class="col-3 divcuentas2">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-                        aria-controls="v-pills-home" aria-selected="true">Recibo de Sueldo </a>
-                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-                        aria-controls="v-pills-profile" aria-selected="false">Tarjetas</a>
-                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
-                        aria-controls="v-pills-messages" aria-selected="false">Trasferencias</a>
-                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
-                        aria-controls="v-pills-settings" aria-selected="false">Pago Mis Cuentas</a>
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Recibo de Sueldo </a>
+                    <a class="nav-link" id="v-pills-home2-tab2" data-toggle="pill" href="#v-pills-home2" role="tab" aria-controls="v-pills-home2" aria-selected="true">Sueldo / Moviento de Cuenta</a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Tarjetas</a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"  aria-controls="v-pills-messages" aria-selected="false">Trasferencias</a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"  aria-controls="v-pills-settings" aria-selected="false">Pago Mis Cuentas</a>
                 </div>
             </div>
             <div class="col-9">
+                <!-- comienza recibo de sueldo -->
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                         aria-labelledby="v-pills-home-tab">
@@ -120,6 +117,76 @@
                             <img src="assets/imagenes/recibodesueldo.jpg" alt="">
                         </div>
                     </div>
+
+                    <!-- termina recibo de sueldo -->
+
+                    <!-- empieza moviento de cuenta -->
+                    <div class="tab-pane fade recibodetarjeta" id="v-pills-home2" role="tabpanel"
+                    aria-labelledby="v-pills-home2-tab2">
+                    <div class="container pt-5 pb-2 pl-3">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="exampleInputEmail1">Sueldo</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="sueldo"
+                                placeholder="Sueldo Completo" aria-describedby="emailHelp" readonly>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="container pt-2 pb-2 pl-3">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="exampleInputEmail1">Tarjeta de Credito</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                placeholder="Codigo de Tarjeta Rolling Credito" aria-describedby="emailHelp" readonly>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="container  pt-2 pb-5 pl-3">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="exampleInputEmail1">Tarjeta de Debito</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                placeholder="Codigo de Tarjeta Rolling Debito" aria-describedby="emailHelp" readonly>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+                    <div>
+                        <h1>Detalle de Gastos</h1>
+                        <table class="table table-dark">
+                            <thead>
+                              <tr>
+                                <th scope="col">Cod Tarjeta</th>
+                                <th scope="col">Lugar de Compra</th>
+                                <th scope="col">Descripcion</th>
+                                <th scope="col">Cuotas</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            
+                            </tbody>
+                          </table>
+                    </div>
+                   
+                  
+
+                </div>
+                    <!-- termina moviento de cuenta -->
+
+
+
                     <div class="tab-pane fade recibodetarjeta" id="v-pills-profile" role="tabpanel"
                         aria-labelledby="v-pills-profile-tab">
                         <img src="assets/imagenes/recibodesueldo2.jpg" class=" img-fluid" alt="">
@@ -295,7 +362,8 @@
           reservados.</p>
       </footer>
     
-    <script src="src/js/infoUser.js"></script>
+
+    <script src="src/js/cuentas.js"></script>
     <script src="https://kit.fontawesome.com/f40d0764a0.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
