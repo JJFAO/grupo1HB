@@ -50,7 +50,7 @@ const buscarUsuario = (nombre, passw) => {
 
             if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin != 1)) {
                 encontrado = 1
-                usuarioLoggeado = {nombre: Usuario.nombre, id: Usuario.id, apellido: Usuario.apellido}
+                usuarioLoggeado = {nombre: Usuario.nombre, id: Usuario.id, apellido: Usuario.apellido, dni:Usuario.docNum, fecha:Usuario.fecha, email: Usuario.email, sexo: Usuario.sexo}
                  login.push(Usuario)
             } else if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin == 1)) {
                 encontrado = 2

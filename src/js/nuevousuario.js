@@ -11,6 +11,7 @@ if (Usuarios === null) {
         cliente: "Administrador",
         nombre: "Andres",
         apellido: "Perlo",
+        sexo: "Masculino",
         razonSocial: 20202020,
         tipoDoc: "DNI",
         docNum: 20202020,
@@ -27,15 +28,14 @@ if (Usuarios === null) {
     console.log("se creo admin")
 }
 
-
-
-const generarUsuario = (ID, Admin, Cliente, Nombre, Apellido, RazonSocial, TipoDoc, DocNum , Fecha, Email, ConfEmail, Passw, ConfPassw, Credito) => {
+const generarUsuario = (ID, Admin, Cliente, Nombre, Apellido, RazonSocial, TipoDoc, DocNum , Fecha, Email, ConfEmail, Passw, ConfPassw, Credito,Genero) => {
     let usuario = {
         id: ID,
         admin: Admin,
         cliente: Cliente,
         nombre: Nombre,
         apellido: Apellido,
+        sexo: Genero,
         razonSocial: RazonSocial,
         tipoDoc: TipoDoc,
         docNum: DocNum,
@@ -78,6 +78,7 @@ formNewDom.addEventListener('submit', (e) =>{
     let Admin=0
     let Nombre = formNewDom.querySelector('[name=Nombre]').value
     let Apellido = formNewDom.querySelector('[name=Apellido]').value
+    let Genero = formNewDom.querySelector("#Genero").value
     let RazonSocial = formNewDom.querySelector('[name=RazonSocial').value
 
     if (RazonSocial < 0 || RazonSocial > 99999999) {
@@ -125,7 +126,6 @@ formNewDom.addEventListener('submit', (e) =>{
       }
     let Credito = 0
 
-    generarUsuario (ID, Admin, Cliente, Nombre,Apellido,RazonSocial,TipoDoc,DocNum,Fecha,Email,ConfEmail,Passw,ConfPassw,Credito)
+    generarUsuario (ID, Admin, Cliente, Nombre,Apellido,RazonSocial,TipoDoc,DocNum,Fecha,Email,ConfEmail,Passw,ConfPassw,Credito,Genero)
     formNewDom.reset()
 })
-

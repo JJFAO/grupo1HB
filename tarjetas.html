@@ -9,6 +9,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="src/css/usuario.css">
     <link rel="stylesheet" href="src/css/animate.css">
+    <link rel="stylesheet" href="src/css/footer.css">
     <script src="src/js/wow.min.js"></script>
     <script>
         new WOW().init();
@@ -82,17 +83,17 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nombre</label>
                                 <input type="text" id="nombre" class="form-control" id="exampleInputEmail1"
-                                    placeholder="Ingrese su Nombre Completo" aria-describedby="emailHelp">
+                                    placeholder="Ingrese su Nombre Completo" aria-describedby="emailHelp" readonly>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Apellido</label>
                                 <input type="text" id="apellido" class="form-control"
-                                    placeholder="Coloque aqui su/s Apellido/s" id="exampleInputPassword1">
+                                    placeholder="Coloque aqui su/s Apellido/s" id="exampleInputPassword1" readonly>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Numero de Documento</label>
                                 <input type="text" id="numerodni" class="form-control" id="exampleInputEmail1"
-                                    placeholder="Numero de DNI" aria-describedby="emailHelp">
+                                    placeholder="Numero de DNI" aria-describedby="emailHelp" readonly>
                             </div>
                             <div>
                                 <div class="d-flex">
@@ -102,38 +103,19 @@
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Fecha de Nacimiento</label>
                                                     <div class="d-flex">
-                                                        <div class="col-md-2">
-                                                            <input type="text" id="dia" class="form-control"
-                                                                placeholder="DIA" id="exampleInputPassword1">
+                                                        <div>
+                                                            <input type="text" id="fechanac" class="form-control"
+                                                                placeholder="Fecha Nacimiento" id="exampleInputPassword1" readonly>
                                                         </div>
-                                                        <div class="col-md-2">
-                                                            <input type="text" id="mes" class="form-control"
-                                                                placeholder="MES" id="exampleInputPassword1">
-                                                        </div>
-                                                        <div class="col-md-3 text-center">
-                                                            <input type="text" id="año" class="form-control"
-                                                                placeholder="AÑO" id="exampleInputPassword1">
-                                                        </div>
+                                                      
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group col-md-3 col-sm-12">
                                                     <label for="exampleInputEmail1">Genero</label>
-                                                    <div class="d-flex">
-                                                        <div class="custom-control custom-radio">
-                                                            <input type="radio" id="customRadio1" name="customRadio"
-                                                                class="custom-control-input">
-                                                            <label class="custom-control-label"
-                                                                for="customRadio1">Masculino</label>
-                                                        </div>
-                                                        <div class="custom-control custom-radio mx-5">
-                                                            <input type="radio" id="customRadio2" name="customRadio"
-                                                                class="custom-control-input">
-                                                            <label class="custom-control-label"
-                                                                for="customRadio2">Femenino</label>
-                                                        </div>
-                                                    </div>
+                                                    <input type="text" id="genero" class="form-control" id="exampleInputEmail1"
+                                                        placeholder="Numero de DNI" aria-describedby="emailHelp" readonly>
                                                 </div>
                                             </div>
                                         </div>
@@ -167,7 +149,7 @@
                                             <div class="form-group  col-12">
                                                 <label for="exampleInputPassword1">Email</label>
                                                 <input type="email" id="email" class="form-control"
-                                                    placeholder="Email@ejemplo.com" id="exampleInputPassword1">
+                                                    placeholder="Email@ejemplo.com" id="exampleInputPassword1" readonly>
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-12">
@@ -207,10 +189,42 @@
         </div>
     </header>
 
-    <footer class="py-5 bg-dark navbar-dark text-white text-center wow lightSpeedIn">
-        <h1>Aqui va el futuro Footer mamilas</h1>
-    </footer>
-
+    <footer class="foot">
+        <div class="redicon text-center">
+          <div class="titlefoot">
+            <h2 class="pt-5 subtitulofoot">ROLLINGBANK</h2>
+          </div>
+          <div class="iconfoot">
+            <a href="https://ar.linkedin.com/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/" target="blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/" target="blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/?lang=es" target="blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/" target="blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 text-center">
+              <p class="mb-1 textfoot">SMT y YB</p>
+              <p id="text-blue">381-614-5118 <i class="fas fa-phone-square ml-1"></i></p>
+              <br>
+              <p class="mb-1 textfoot">Previsional</p>
+              <p id="text-blue">0810-325-9707 <i class="fas fa-phone-square ml-1"></i></p>
+            </div>
+            <div class="col-md-6 text-center">
+              <p class="mb-1 textfoot">Hacete cliente</p>
+              <p id="text-blue">0810-325-9708 <i class="fas fa-phone-square ml-1"></i></p>
+              <br>
+              <p class="mb-1 textfoot">¿Podemos ayudarte?</p>
+              <a href="#contactar" class="text-decoration-none">
+                <p id="text-blue">Escribinos <i class="far fa-edit ml-1"></i></p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="lead text-white pt-5 pb-4 text-center copyfoot">RollingBank | Copyright ® 2020. Todos los derechos
+          reservados.</p>
+      </footer>
     <script src="src/js/infoUser.js"></script>
     <script src="src/js/tarjetaRollingVisaInt.js"></script>
     <script src="https://kit.fontawesome.com/f40d0764a0.js" crossorigin="anonymous"></script>
