@@ -48,7 +48,7 @@ const buscarUsuario = (nombre, passw) => {
         for (let i = 0; i < Usuarios.length; i++) {
             const Usuario = Usuarios[i];
 
-            if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin != 1)) {
+            if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin == 0)) {
                 encontrado = 1
                 usuarioLoggeado = {nombre: Usuario.nombre, id: Usuario.id, apellido: Usuario.apellido, dni:Usuario.docNum, fecha:Usuario.fecha, email: Usuario.email, sexo: Usuario.sexo, credito: Usuario.credito}
                  login.push(Usuario)
@@ -56,6 +56,10 @@ const buscarUsuario = (nombre, passw) => {
                 encontrado = 2
                 usuarioLoggeado = {nombre: Usuario.nombre, id: Usuario.id, apellido: Usuario.apellido}
                  admin.push(Usuario)
+            }else if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin == 2)) {
+                encontrado = 3
+                usuarioLoggeado = {nombre: Usuario.nombre, id: Usuario.id, apellido: Usuario.apellido}
+                 usuario.push(Usuario)
             }else{
                 encontrdo = 0
             }
@@ -68,6 +72,10 @@ const buscarUsuario = (nombre, passw) => {
             imprimir(admin)
             localStorage.setItem("usuarioLoggeado", JSON.stringify(usuarioLoggeado))
             location.href = "admin.html"
+        }else  if (encontrado == 3) {
+            imprimir(login)
+            localStorage.setItem("usuarioLoggeado", JSON.stringify(usuarioLoggeado))
+            location.href = "usuarios.html" //aca si sos persona juridica
         }else{
             console.log("usuario o pasword incorrecto")
         }

@@ -83,11 +83,11 @@
                             <span class="ir-empresa fas fa-city tablinks d-md-none" onclick="openTab(event, 'Empresas')" id="defaultOpen" alt="Ir a Empresas"></span>
                             <div class="form-input">
                                 <span><i class="far fa-user"></i></span>
-                                <input type="email" placeholder="Ingresa tu Usuario" name="Nombre" required>
+                                <input type="email" placeholder="Ingresa tu Usuario" name="Nombre" autofocus autocomplete="off" required>
                             </div>
                             <div class="form-input">
                                 <span><i class="fa fa-lock"></i></span>
-                                <input type="password" placeholder="Ingresa tu Clave" name="Passw" required>
+                                <input type="password" placeholder="Ingresa tu Clave" name="Passw" autofocus autocomplete="off" required>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-6 d-flex">
@@ -170,15 +170,15 @@
                     <h5 class="text-left">Completa los datos</h5>
                     <hr>
                     <label class="sr-only" for="nombre">Nombre</label>
-                    <input type="text" placeholder="Ingresa tu nombre" name="Nombre" required>
+                    <input type="text" placeholder="Ingresa tu nombre" name="Nombre" autofocus autocomplete="off" required>
                     <label class="sr-only" for="nombre">Apellido</label>
-                    <input type="text" placeholder="Ingresa tu Apellido" name="Apellido" required>
+                    <input type="text" placeholder="Ingresa tu Apellido" name="Apellido" autocomplete="off" required>
                     <label class="sr-only" for="nombre">Genero</label>
-                    <input type="text" placeholder="Masculino/Femenino" id="Genero" required>
+                    <input type="text" placeholder="Masculino/Femenino" id="Genero" autocomplete="off" required>
                     <label class="sr-only" for="nombre">Razon Social</label>
-                    <input type="text" placeholder="Razon Social" name="RazonSocial" required>
+                    <input type="text" placeholder="Razon Social" name="RazonSocial" autocomplete="off" required>
                     <div class="d-flex flex-nowrap align-items-center  justify-content-between">
-                            <select class="w-25 boxtipo" name="TipoDoc">
+                            <select class="w-25 boxtipo" name="TipoDoc" autocomplete="off">
                                 <option selected>Tipo</option>
                                 <option value="1">DNI</option>
                                 <option value="2">CUIL</option>
@@ -187,7 +187,7 @@
                             </select>
                         <div class="w-75 h-100 pr-0 pl-2">
                             <label class="sr-only" for="inlineFormInputGroup">Documento Nº</label>
-                            <input type="text" class="" id="inlineFormInputGroup" placeholder="Numero" name="dni">
+                            <input type="text" class="" id="inlineFormInputGroup" placeholder="Numero" name="dni" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="d-flex align-items-center justify-content-between ">
@@ -196,17 +196,17 @@
                         </div>
                         <div class="w-75 ">
                             <input type="date" id="start" name="Fecha" value="2020-07-22" min="1900-01-01"
-                                max="2020-12-31">
+                                max="2020-12-31" autocomplete="off" required>
                         </div>
                     </div>
                     <label class="sr-only" for="email">Email</label>
-                    <input type="email" placeholder="Ingresa tu Email" name="Email" required>
+                    <input type="email" placeholder="Ingresa tu Email" name="Email" autocomplete="off" required>
                     <label class="sr-only" for="email">Confirmar Email</label>
-                    <input type="email" placeholder="Confirma tu Email" name="ConfEmail" required>
+                    <input type="email" placeholder="Confirma tu Email" name="ConfEmail" autocomplete="off" required>
                     <label class="sr-only" for="psw">Ingresa tu contraseña</label>
-                    <input type="password" placeholder="Ingresa tu contraseña" name="Passw" required>
+                    <input type="password" placeholder="Ingresa tu contraseña" name="Passw"minlength="8" maxlength="30" autocomplete="off" required>
                     <label class="sr-only" for="psw-repeat">Repetir contraseña</label>
-                    <input type="password" placeholder="Repetir contraseña" name="ConfPassw" required>                    
+                    <input type="password" placeholder="Repetir contraseña" name="ConfPassw" minlength="8" maxlength="30" autocomplete="off" required>                    
                     <p>Al crear tu cuenta, estas aceptando nuestros <a href="termycond.html" target="_blanck">Terminos y Condiciones</a>.</p>
                     <div class="clearfix mb-4 mt-4">
                         <button type="button" class="cancelbtn" data-dismiss="modal">Cancelar</button>

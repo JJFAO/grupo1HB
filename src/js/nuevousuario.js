@@ -56,7 +56,7 @@ const agregarUsuario = (usuario) => {
     let control = 0
     for (let i = 0; i < Usuarios.length; i++) {
         const Usuario = Usuarios[i];
-        if ((Usuario.docNum === usuario.docNum) || (Usuario.id === usuario.id)) {
+        if ((Usuario.docNum === usuario.docNum) || (Usuario.id === usuario.id) || (Usuario.email === usuario.email)) {
             control = 1
         }
     }
@@ -64,6 +64,7 @@ const agregarUsuario = (usuario) => {
         Usuarios.push(usuario)
         localStorage.setItem('Usuarios', JSON.stringify(Usuarios))
         console.log("Se agrego un usuario")
+        window.location.assign("index.html")
     } else {
         console.log("el usuario ya existe")
     }
@@ -77,17 +78,41 @@ formNewDom.addEventListener('submit', (e) =>{
     let Cliente= "no"
     let Admin=0
     let Nombre = formNewDom.querySelector('[name=Nombre]').value
+
+    if (!isNaN (Nombre)) {
+        console.log("nombre invalido") //colocar error 
+      return
+    }
+
     let Apellido = formNewDom.querySelector('[name=Apellido]').value
+    if (!isNaN (Apellido)) {
+        console.log("apellido invalido") //colocar error 
+      return
+    }
     let Genero = formNewDom.querySelector("#Genero").value
+    if (!isNaN (Genero)) {
+        console.log("genero invalido") //colocar error 
+      return
+    }
+
     let RazonSocial = formNewDom.querySelector('[name=RazonSocial').value
 
-    if (RazonSocial < 0 || RazonSocial > 99999999) {
-        console.log("razonSocial invalida") //colocar error razonsocial
+    if (!isNaN (RazonSocial)) {
+        console.log("Razon Social invalida") //colocar error 
       return
     }
 
     let TipoDoc = formNewDom.querySelector('[name=TipoDoc]')
     TipoDoc=TipoDoc.options[TipoDoc.selectedIndex].text
+
+    if (TipoDoc == "Tipo") {
+      console.log("tipo de documento invalido"); //colocar error en el documento
+      return;
+    } else if (TipoDoc == "CUIT") {
+        Admin = 2
+    }
+
+
     let DocNum = formNewDom.querySelector('[name=dni]').value
     
     DocNum=parseInt(DocNum)
@@ -109,7 +134,18 @@ formNewDom.addEventListener('submit', (e) =>{
         return
     }
 
+    const validateEmail = (email) => {
+        var valido = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+        return valido.test(email);
+      }
+
     let Email = formNewDom.querySelector('[name=Email]').value
+    if (!validateEmail(Email)) {
+        console.log("email mal")
+        return
+      }
+    
+
     let ConfEmail = formNewDom.querySelector('[name=ConfEmail]').value
     
     if (Email != ConfEmail) {
