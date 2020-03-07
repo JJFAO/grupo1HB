@@ -9,12 +9,26 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/login.css">
     <link rel="stylesheet" href="src/css/signup.css">
+    <link rel="stylesheet" href="src/css/style.css">
     <script src="https://kit.fontawesome.com/2d93d83a15.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&display=swap"
         rel="stylesheet">
     <title>RollingBank</title>
 </head>
-<body > ​
+<header class="d-md-none d-sm-block">
+    <div>
+      <nav class="backgroundnav navbar navbar-expand-lg">
+        <div class="d-flex">
+          <div class="logo">
+            <a href="index.html">
+              <h1 class="h1color">Rolling Bank</h1>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+<body> ​
     <div class="container-fluid">
         <div class="row">
             <!-- Este es el lado izquierdo -->
@@ -22,7 +36,7 @@
                 <!-- Este es el Logo -->
                 <div class="div-logo py-5">
                     <a class="link-logo d-flex justify-content-center"
-                        href="https://www.bancociudad.com.ar/autogestion/" target="blank">
+                        href="index.html" target="blank">
                         <h1 class="title-logo">RollingBank</h1>
                         <img class="img-logo" src="./assets/img/logoBlanco.svg" alt="logo">
                     </a>
@@ -77,11 +91,7 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-6 d-flex">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="cbl">
-                                        <label class="custom-control-label text-white" for="cbl">Recordar
-                                            Usuario</label>
-                                    </div>
+                                  
                                 </div>
                                 <div class="col-6 text-right">
                                     <a href=# class="forget-link">Olvidé mi contraseña</a>
@@ -124,13 +134,7 @@
                                 <input type="password" placeholder="Ingresa Clave" required>
                             </div>
                             <div class="row mb-3">
-                                <div class="col-6 d-flex">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="cbl2">
-                                        <label class="custom-control-label text-white" for="cbl2">Recordar
-                                            Usuario</label>
-                                    </div>
-                                </div>
+                             
                                 <div class="col-6 text-right">
                                     <a href="#" class="forget-link">Olvidé mi contraseña</a>
                                 </div>
@@ -169,6 +173,8 @@
                     <input type="text" placeholder="Ingresa tu nombre" name="Nombre" required>
                     <label class="sr-only" for="nombre">Apellido</label>
                     <input type="text" placeholder="Ingresa tu Apellido" name="Apellido" required>
+                    <label class="sr-only" for="nombre">Genero</label>
+                    <input type="text" placeholder="Masculino/Femenino" id="Genero" required>
                     <label class="sr-only" for="nombre">Razon Social</label>
                     <input type="text" placeholder="Razon Social" name="RazonSocial" required>
                     <div class="d-flex flex-nowrap align-items-center  justify-content-between">

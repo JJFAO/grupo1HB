@@ -44,23 +44,30 @@ const buscarUsuario = (nombre, passw) => {
     if (Usuarios == null) {
         console.log("no hay usuarios")
     } else {
+        let usuarioLoggeado;
         for (let i = 0; i < Usuarios.length; i++) {
             const Usuario = Usuarios[i];
 
             if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin != 1)) {
                 encontrado = 1
-                login.push(Usuario)
+                usuarioLoggeado = {nombre: Usuario.nombre, id: Usuario.id, apellido: Usuario.apellido, dni:Usuario.docNum, fecha:Usuario.fecha, email: Usuario.email, sexo: Usuario.sexo, credito: Usuario.credito}
+                 login.push(Usuario)
             } else if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin == 1)) {
                 encontrado = 2
-                admin.push(Usuario)
+                usuarioLoggeado = {nombre: Usuario.nombre, id: Usuario.id, apellido: Usuario.apellido}
+                 admin.push(Usuario)
             }else{
                 encontrdo = 0
             }
         }
         if (encontrado == 1) {
             imprimir(login)
+            localStorage.setItem("usuarioLoggeado", JSON.stringify(usuarioLoggeado))
+            location.href = "usuarios.html"
         } else  if (encontrado == 2) {
             imprimir(admin)
+            localStorage.setItem("usuarioLoggeado", JSON.stringify(usuarioLoggeado))
+            location.href = "admin.html"
         }else{
             console.log("usuario o pasword incorrecto")
         }
