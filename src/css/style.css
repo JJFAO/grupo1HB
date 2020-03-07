@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo a{
+    text-decoration: none;
+    
+}
+
+.imagen{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transition-duration: 3s;
+    animation: img 5s infinite;
+}
+
+@keyframes img{
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+       transform: rotateY(360deg);
+    }
+}
+
+.backgroundnav{
+   background: #1e1e2c;
+}
+
+.h1color{
+    color: white;
+}
+
+.h6color{
+    color: white;
+    text-align: center;
+}
+
+.listageneral a{
+    color: white !important;
+    text-decoration: none;
+    font-size: 21px;
+
+}
+
+.listageneral ul li{
+    list-style-type:none;
+    margin-left: 2vw;
+}
+
+.icono{
+    background: white;
+}

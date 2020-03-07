@@ -6,11 +6,12 @@ let Usuarios = JSON.parse(localStorage.getItem('Usuarios'))
 if (Usuarios === null) {
     Usuarios=[]
     let admin = {
-        id: 0,
+        id: 777,
         admin: 1,
         cliente: "Administrador",
         nombre: "Andres",
         apellido: "Perlo",
+        sexo: "Masculino",
         razonSocial: 20202020,
         tipoDoc: "DNI",
         docNum: 20202020,
@@ -19,7 +20,7 @@ if (Usuarios === null) {
         confEmail: "a@a",
         passw: "rolling",
         confPassw: "rolling",
-        credito: 0
+        credito: 10000000
     }
     Usuarios.push(admin)
     localStorage.setItem('Usuarios', JSON.stringify(Usuarios))
@@ -27,15 +28,14 @@ if (Usuarios === null) {
     console.log("se creo admin")
 }
 
-
-
-const generarUsuario = (ID, Admin, Cliente, Nombre, Apellido, RazonSocial, TipoDoc, DocNum , Fecha, Email, ConfEmail, Passw, ConfPassw, Credito) => {
+const generarUsuario = (ID, Admin, Cliente, Nombre, Apellido, RazonSocial, TipoDoc, DocNum , Fecha, Email, ConfEmail, Passw, ConfPassw, Credito,Genero) => {
     let usuario = {
         id: ID,
         admin: Admin,
         cliente: Cliente,
         nombre: Nombre,
         apellido: Apellido,
+        sexo: Genero,
         razonSocial: RazonSocial,
         tipoDoc: TipoDoc,
         docNum: DocNum,
@@ -56,7 +56,7 @@ const agregarUsuario = (usuario) => {
     let control = 0
     for (let i = 0; i < Usuarios.length; i++) {
         const Usuario = Usuarios[i];
-        if ((Usuario.docNum === usuario.docNum) || (Usuario.id === usuario.id)) {
+        if ((Usuario.docNum === usuario.docNum) || (Usuario.id === usuario.id) || (Usuario.email === usuario.email)) {
             control = 1
         }
     }
@@ -64,6 +64,7 @@ const agregarUsuario = (usuario) => {
         Usuarios.push(usuario)
         localStorage.setItem('Usuarios', JSON.stringify(Usuarios))
         console.log("Se agrego un usuario")
+        window.location.assign("index.html")
     } else {
         console.log("el usuario ya existe")
     }
@@ -77,7 +78,23 @@ formNewDom.addEventListener('submit', (e) =>{
     let Cliente= "no"
     let Admin=0
     let Nombre = formNewDom.querySelector('[name=Nombre]').value
+
+    if (!isNaN (Nombre)) {
+        console.log("nombre invalido") //colocar error 
+      return
+    }
+
     let Apellido = formNewDom.querySelector('[name=Apellido]').value
+    if (!isNaN (Apellido)) {
+        console.log("apellido invalido") //colocar error 
+      return
+    }
+    let Genero = formNewDom.querySelector("#Genero").value
+    if (!isNaN (Genero)) {
+        console.log("genero invalido") //colocar error 
+      return
+    }
+
     let RazonSocial = formNewDom.querySelector('[name=RazonSocial').value
 
     if (RazonSocial < 0 || RazonSocial > 99999999) {
@@ -88,6 +105,15 @@ formNewDom.addEventListener('submit', (e) =>{
 
     let TipoDoc = formNewDom.querySelector('[name=TipoDoc]')
     TipoDoc=TipoDoc.options[TipoDoc.selectedIndex].text
+
+    if (TipoDoc == "Tipo") {
+      console.log("tipo de documento invalido"); //colocar error en el documento
+      return;
+    } else if (TipoDoc == "CUIT") {
+        Admin = 2
+    }
+
+
     let DocNum = formNewDom.querySelector('[name=dni]').value
     
     DocNum=parseInt(DocNum)
@@ -110,7 +136,18 @@ formNewDom.addEventListener('submit', (e) =>{
         return
     }
 
+    const validateEmail = (email) => {
+        var valido = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+        return valido.test(email);
+      }
+
     let Email = formNewDom.querySelector('[name=Email]').value
+    if (!validateEmail(Email)) {
+        console.log("email mal")
+        return
+      }
+    
+
     let ConfEmail = formNewDom.querySelector('[name=ConfEmail]').value
     
     if (Email != ConfEmail) {
@@ -127,7 +164,6 @@ formNewDom.addEventListener('submit', (e) =>{
       }
     let Credito = 0
 
-    generarUsuario (ID, Admin, Cliente, Nombre,Apellido,RazonSocial,TipoDoc,DocNum,Fecha,Email,ConfEmail,Passw,ConfPassw,Credito)
+    generarUsuario (ID, Admin, Cliente, Nombre,Apellido,RazonSocial,TipoDoc,DocNum,Fecha,Email,ConfEmail,Passw,ConfPassw,Credito,Genero)
     formNewDom.reset()
 })
-
