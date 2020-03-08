@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/img/favicon.ico" />
   <title>Document</title>
   <link rel="stylesheet" href="src/css/style.css">
   <link rel="stylesheet" href="src/css/index.css">
@@ -232,28 +233,30 @@
     </div>
   </div>
   <!-- This is the contact form -->
-  <div id="contactar" class="container-fluid contact">
-    <div>
-      <h2 class="maintitle">Contactanos</h2>
-    </div>
-    <div class="row">
-      <div class="col-lg-4 col-md-6 col-xs-12 mt-2">
-        <input type="text" class="form-control mb-4 p-4 borderbox" placeholder="Nombre">
-        <input type="text" class="form-control p-4 borderbox" placeholder="Apellido">
+  <form id="contactar">
+    <div  class="container-fluid contact">
+      <div>
+        <h2 class="maintitle">Contactanos</h2>
       </div>
-      <div class="col-lg-4 col-md-6 col-xs-12 mt-2">
-        <input type="email" class="form-control mb-4 p-4 borderbox" placeholder="E-mail">
-        <input type="number" class="form-control mb-3 p-4 borderbox" placeholder="Telefono">
-      </div>
-      <div class="col-lg-4 col-md-6 col-xs-12 mt-2">
-        <div class="form-group subo">
-          <textarea class="form-control mb-2  p-3 borderbox" id="exampleFormControlTextarea1" rows="4"
-            placeholder="Ingresa tu comentario"></textarea>
-          <button type="submit" class="btn btn-sub">Enviar</button>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-xs-12 mt-2">
+          <input type="text" class="form-control mb-4 p-4 borderbox" placeholder="Nombre" name="Nombre" autocomplete="off">
+          <input type="text" class="form-control p-4 borderbox" placeholder="Apellido" name="Apellido" autocomplete="off">
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12 mt-2">
+          <input type="email" class="form-control mb-4 p-4 borderbox" placeholder="E-mail" name="Email" autocomplete="off">
+          <input type="text" class="form-control mb-3 p-4 borderbox" placeholder="Telefono" name="Telefono" autocomplete="off">
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12 mt-2">
+          <div class="form-group subo">
+            <textarea class="form-control mb-2  p-3 borderbox" id="exampleFormControlTextarea1" rows="4"
+              placeholder="Ingresa tu comentario" name="Consulta" autocomplete="off"></textarea>
+            <button type="submit" class="btn btn-sub ">Enviar</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </form>
   <!--Start footer-->
   <footer class="foot">
     <div class="redicon text-center">
@@ -291,7 +294,7 @@
     <p class="lead text-white pt-5 pb-4 text-center copyfoot">RollingBank | Copyright ® 2020. Todos los derechos
       reservados.</p>
   </footer>
-
+  <script src="src/js/index.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
