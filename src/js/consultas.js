@@ -61,9 +61,9 @@ cambios.addEventListener("submit", e => {
   e.preventDefault();
 
   let cambio = cambios.querySelectorAll("#opciones");
-  cambio.forEach(myFunction);
+  cambio.forEach(actualizar);
 
-  function myFunction(estado, index) {
+  function actualizar(estado, index) {
     let Usuarios = JSON.parse(localStorage.getItem("Usuarios"));
     estado = estado.options[estado.selectedIndex].text;
     Usuarios[index].cliente= estado

@@ -1,8 +1,10 @@
 (function () {
 
+    
     let formulario = document.getElementById('formulario');
     elementos = formulario.elements;
     boton = document.getElementById('btn');
+    const Usuarios = JSON.parse(localStorage.getItem('Usuarios'))
 
     let validarMensual = function (e) {
         if (formulario.ingresomensual.value == 0 || formulario.ingresomensual.value == "") {
@@ -16,8 +18,6 @@
             alert("Completar el Campo Motivo");
         }
     };
-
-
 
 
     let validarCelular = function (e) {
@@ -41,11 +41,13 @@
         }
     };
 
+
     let validar = function (e) {
         validarMensual(e);
         validarMotivo(e);
         validarCelular(e);
         validarOperadora(e);
+       
     };
     formulario.addEventListener('submit', validar);
 
