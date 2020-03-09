@@ -21,7 +21,7 @@ agregarEmail.value = usuarioLoggeado[0].email;
 
 let formularioTarjeta = document.querySelector("#formulario")
 
-formularioTarjeta.addEventListener("submit", e => {
+formularioTarjeta.addEventListener("submit", (e) => {
   e.preventDefault();
 
   let nombre = document.querySelector("#nombre").value
