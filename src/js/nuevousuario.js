@@ -8,7 +8,7 @@ if (Usuarios === null) {
     let admin = {
         id: 777,
         admin: 1,
-        cliente: "Administrador",
+        cliente: "Si",
         nombre: "Andres",
         apellido: "Perlo",
         sexo: "Masculino",
@@ -75,7 +75,7 @@ formNewDom.addEventListener('submit', (e) =>{
     e.preventDefault()
 
     let ID = Math.floor(Math.random() * 100000)
-    let Cliente= "no"
+    let Cliente= "Pendiente"
     let Admin=0
     let Nombre = formNewDom.querySelector('[name=Nombre]').value
 
