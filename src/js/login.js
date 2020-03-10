@@ -86,6 +86,7 @@ const imprimir = (usuario) => {
     console.log("Bienvenido " +usuario[0].nombre+" "+usuario[0].apellido)
     console.log(usuario[0].cliente+" eres cliente del banco")
     console.log("tienes un credito de "+usuario[0].credito+" pesos")
+   // mostrarMensajeOk("Bienvenido " +usuario[0].nombre+" "+usuario[0].apellido+ +usuario[0].cliente+" eres cliente del banco."+ +"tienes un credito de "+usuario[0].credito+" pesos")
 }
 
 

@@ -32,8 +32,8 @@
     background-color: #33e1ed;    
 }
 .btn-sub{
-    background-color: #1e1e2c;
-    color:#ffffff ;
+    background-color: #1e1e2c !important;
+    color:#ffffff !important ;
     font-size: 20px;
 }
 .btn-sub:hover{
