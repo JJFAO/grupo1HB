@@ -41,7 +41,7 @@ const buscarUsuario = (nombre, passw) => {
     const Usuarios = JSON.parse(localStorage.getItem('Usuarios'))
 
     if (Usuarios == null) {
-        console.log("no hay usuarios")
+        mostrarMensajeError("No hay usuarios")
     } else {
         //encontrado = 1 si es administrador
         //encontrado = 2 si es usuario con CUIT
@@ -77,7 +77,7 @@ const buscarUsuario = (nombre, passw) => {
             localStorage.setItem("usuarioLoggeado", JSON.stringify(usuarioLoggeado))
             location.href = "usuarios.html" //aca si sos persona juridica
         }else{
-            console.log("usuario o pasword incorrecto")
+            mostrarMensajeError("Usuario o Password Incorrecto")
         }
     }
 }
@@ -86,6 +86,7 @@ const imprimir = (usuario) => {
     console.log("Bienvenido " +usuario[0].nombre+" "+usuario[0].apellido)
     console.log(usuario[0].cliente+" eres cliente del banco")
     console.log("tienes un credito de "+usuario[0].credito+" pesos")
+   // mostrarMensajeOk("Bienvenido " +usuario[0].nombre+" "+usuario[0].apellido+ +usuario[0].cliente+" eres cliente del banco."+ +"tienes un credito de "+usuario[0].credito+" pesos")
 }
 
 
