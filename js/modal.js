@@ -14,8 +14,7 @@ function mostrarMensajeOk(mjerror){
          </button>
            <p id="idMensaje" class=" d-flex justify-content-center">${mjerror} </p> 
        </div>
-       <div class="modal-footer">
-         
+       <div class="modal-footer d-flex justify-content-center">
          <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Aceptar</button>
        </div>
      </div>
@@ -43,9 +42,9 @@ function mostrarMensajeError(mjerror){
           </button>
             <p id="idMensaje" class=" d-flex justify-content-center">${mjerror} </p> 
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer d-flex justify-content-center">
           
-          <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-window-close-o" aria-hidden="true"></i> Cancelar</button>
+          <button type="button" class="btn btn-primary " data-dismiss="modal"><i class="fa fa-window-close-o" aria-hidden="true"></i> Cancelar</button>
         </div>
       </div>
     </div>

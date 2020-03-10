@@ -25,7 +25,7 @@ if (Usuarios === null) {
     Usuarios.push(admin)
     localStorage.setItem('Usuarios', JSON.stringify(Usuarios))
 
-    console.log("se creo admin")
+    mostrarMensajeOk("Se creo con éxito el administrador")
 }
 
 const generarUsuario = (ID, Admin, Cliente, Nombre, Apellido, RazonSocial, TipoDoc, DocNum , Fecha, Email, ConfEmail, Passw, ConfPassw, Credito,Genero) => {
@@ -63,10 +63,10 @@ const agregarUsuario = (usuario) => {
     if (control === 0) {
         Usuarios.push(usuario)
         localStorage.setItem('Usuarios', JSON.stringify(Usuarios))
-        console.log("Se agrego un usuario")
+        mostrarMensajeOk("Se agrego el usuario con éxito.")
         window.location.assign("index.html")
     } else {
-        console.log("el usuario ya existe")
+        mostrarMensajeError("El usuario ya existe!!")
     }
 }
 //eventos
@@ -80,18 +80,18 @@ formNewDom.addEventListener('submit', (e) =>{
     let Nombre = formNewDom.querySelector('[name=Nombre]').value
 
     if (!isNaN (Nombre)) {
-        console.log("nombre invalido") //colocar error 
+        mostrarMensajeError("Nombre inválido") //colocar error 
       return
     }
 
     let Apellido = formNewDom.querySelector('[name=Apellido]').value
     if (!isNaN (Apellido)) {
-        console.log("apellido invalido") //colocar error 
+        mostrarMensajeError("Apellido inválido") //colocar error 
       return
     }
     let Genero = formNewDom.querySelector("#Genero").value
     if (!isNaN (Genero)) {
-        console.log("genero invalido") //colocar error 
+        mostrarMensajeError("Género inválido") //colocar error 
       return
     }
 
@@ -107,7 +107,7 @@ formNewDom.addEventListener('submit', (e) =>{
     TipoDoc=TipoDoc.options[TipoDoc.selectedIndex].text
 
     if (TipoDoc == "Tipo") {
-      console.log("tipo de documento invalido"); //colocar error en el documento
+      mostrarMensajeError("Tipo de documento inválido"); //colocar error en el documento
       return;
     } else if (TipoDoc == "CUIT") {
         Admin = 2
@@ -143,7 +143,7 @@ formNewDom.addEventListener('submit', (e) =>{
 
     let Email = formNewDom.querySelector('[name=Email]').value
     if (!validateEmail(Email)) {
-        console.log("email mal")
+        mostrarMensajeError("Email no válido")
         return
       }
     
