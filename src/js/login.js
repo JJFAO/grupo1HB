@@ -36,27 +36,27 @@ const buscarUsuario = (nombre, passw) => {
     let usuario = nombre
     let pasword = passw
     let encontrado = 0
-    let login = []
-    let admin = []
+    let usuarioLoggeado= []
 
     const Usuarios = JSON.parse(localStorage.getItem('Usuarios'))
 
     if (Usuarios == null) {
         mostrarMensajeError("No hay usuarios")
     } else {
-        let usuarioLoggeado;
+        //encontrado = 1 si es administrador
+        //encontrado = 2 si es usuario con CUIT
+        //encontrado = 3 si es usuario
+        
         for (let i = 0; i < Usuarios.length; i++) {
             const Usuario = Usuarios[i];
 
-            if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin == 0)) {
+            if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin == 0) && (Usuario.cliente == "Si")) {
                 encontrado = 1
-                usuarioLoggeado = {nombre: Usuario.nombre, id: Usuario.id, apellido: Usuario.apellido, dni:Usuario.docNum, fecha:Usuario.fecha, email: Usuario.email, sexo: Usuario.sexo, credito: Usuario.credito}
-                 login.push(Usuario)
-            } else if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin == 1)) {
+                usuarioLoggeado.push(Usuario)
+            } else if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin == 1)  && (Usuario.cliente == "Si")) {
                 encontrado = 2
-                usuarioLoggeado = {nombre: Usuario.nombre, id: Usuario.id, apellido: Usuario.apellido}
-                 admin.push(Usuario)
-            }else if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin == 2)) {
+                usuarioLoggeado.push(Usuario)
+            }else if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin == 2)  && (Usuario.cliente == "Si")) {
                 encontrado = 3
                 usuarioLoggeado = {nombre: Usuario.nombre, id: Usuario.id, apellido: Usuario.apellido}
                  usuario.push(Usuario)
@@ -65,15 +65,15 @@ const buscarUsuario = (nombre, passw) => {
             }
         }
         if (encontrado == 1) {
-            imprimir(login)
+            imprimir(usuarioLoggeado)
             localStorage.setItem("usuarioLoggeado", JSON.stringify(usuarioLoggeado))
             location.href = "usuarios.html"
         } else  if (encontrado == 2) {
-            imprimir(admin)
+            imprimir(usuarioLoggeado)
             localStorage.setItem("usuarioLoggeado", JSON.stringify(usuarioLoggeado))
             location.href = "admin.html"
         }else  if (encontrado == 3) {
-            imprimir(login)
+            imprimir(usuarioLoggeado)
             localStorage.setItem("usuarioLoggeado", JSON.stringify(usuarioLoggeado))
             location.href = "usuarios.html" //aca si sos persona juridica
         }else{

@@ -70,3 +70,4 @@
     formulario.addEventListener('submit', validar);
 
 }())
+
