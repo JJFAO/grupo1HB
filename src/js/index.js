@@ -32,7 +32,9 @@ const guardarConsulta = (dat) => {
     //window.location.assign("index.html")
 }
 
-
+const borraarLogueado = () =>{
+    localStorage.removeItem('usuarioLoggeado')
+}
 
 //evento
 contactanos.addEventListener('submit', (e) =>{

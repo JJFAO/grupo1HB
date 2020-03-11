@@ -4,14 +4,14 @@
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    background: #70e1ee;
+    background: #33E1ED;
     margin-top: -26px;
 }
 
 /* Side left */
 
 .left-container {
-    background: linear-gradient(125deg,#70e1ee, #2D2D44, #1E1E2C); 
+    background: linear-gradient(125deg,#33E1ED, #2D2D44, #1E1E2C); 
     margin-bottom: -56px;
 }
 
