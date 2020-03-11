@@ -28,7 +28,7 @@ const guardarConsulta = (dat) => {
     Consultas.push(dat)
     console.log(Consultas)
     localStorage.setItem('Consultas', JSON.stringify(Consultas))
-    //window.location.assign("index.html")
+    window.location.assign("index.html")
 }
 
 const borraarLogueado = () =>{
