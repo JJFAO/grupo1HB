@@ -28,6 +28,7 @@ const guardarConsulta = (dat) => {
     Consultas.push(dat)
     console.log(Consultas)
     localStorage.setItem('Consultas', JSON.stringify(Consultas))
+    mostrarMensajeOk("Tu consulta fue enviada")
     //window.location.assign("index.html")
 }
 
