@@ -70,7 +70,7 @@ const agregarUsuario = (usuario) => {
         Usuarios.push(usuario)
         localStorage.setItem('Usuarios', JSON.stringify(Usuarios))
         mostrarMensajeOk("Se agrego el usuario con éxito.")
-        window.location.assign("index.html")
+        //window.location.assign("index.html")
     } else {
         mostrarMensajeError("El usuario ya existe!!")
     }
