@@ -22,7 +22,6 @@ function mostrarMensajeOk(mjerror){
  </div>`
     para.innerHTML = template;
     var messageContainer = document.getElementById("idMensaje");
-    console.log(messageContainer)
     messageContainer.innerHTML = '';
     messageContainer.appendChild(para);
     $('#modalmensaje').modal('show')
@@ -51,7 +50,6 @@ function mostrarMensajeError(mjerror){
   </div>`
      para.innerHTML = template;
      var messageContainer = document.getElementById("idMensaje");
-     console.log(messageContainer)
      messageContainer.innerHTML = '';
      messageContainer.appendChild(para);
      $('#modalmensaje').modal('show')
