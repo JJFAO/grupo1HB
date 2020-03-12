@@ -1,3 +1,6 @@
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
 .btn{
     background: #33E1ED;
     -webkit-box-shadow: 32px 25px 45px 0px #000000; 

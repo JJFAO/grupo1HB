@@ -1,4 +1,6 @@
-
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
 .main{
     background-color: #2d2d44;
 }
