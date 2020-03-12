@@ -4,6 +4,13 @@
 .main{
     background-color: #2d2d44;
 }
+.btn-bank{
+    background-color: #33e1ed !important;
+    font-size: 2rem !important;
+    padding-left: 10px ; 
+    padding-right: 10px ;
+
+}
 .btn-bank a{
     text-decoration: none !important;
     color: #ffffff !important;

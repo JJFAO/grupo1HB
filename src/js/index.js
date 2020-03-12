@@ -9,15 +9,16 @@ if (Consultas === null) {
 //funciones
 
 const crearConsulta = (nombre, apellido, email, telefono, consulta) => {
+   
     let nuevaConsulta = {
         Nombre: nombre,
         Apellido: apellido,
         Email: email,
         Telefono: telefono,
         Consultanueva: consulta
+    
     }
-    console.log(nuevaConsulta)
-    guardarConsulta(nuevaConsulta)
+    guardarConsulta();
 }
 
 const guardarConsulta = (dat) => {
