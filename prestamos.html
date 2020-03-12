@@ -6,7 +6,8 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico" />
+    <title>RollingBank prestamos</title>
     <link rel="stylesheet" href="src/css/usuario.css">
     <link rel="stylesheet" href="src/css/animate.css">
     <link rel="stylesheet" href="src/css/footer.css">
@@ -39,7 +40,7 @@
                         </a>
                     </div>
                 </div>
-                <button class="px-2 icono navbar-toggler d-md-none d-sm-flex navbar navbar-light border border-xlight"
+                <button class="px-2 icono navbar-toggler navbar navbar-light border border-xlight"
                     type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
                     aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class=" navbar-toggler-icon "></span>
@@ -80,7 +81,13 @@
         </div>
     </header>
 
-    <div>
+    <!--mostrar si hay prestamos-->
+    <h3 class="container text-left my-5">Prestamos Rolling</h3>
+    <div class="container mt-4" id="mostrarPrestamo">
+        
+    </div>
+    <!--mostrar si hay prestamos-->
+    
         <h1 class="text-center my-5">Solicitud de Prestamos Rolling</h1>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -141,7 +148,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Ingreso Neto Mensuales</label>
                                     <input type="text" id="ingresomensual" class="form-control"
-                                        placeholder="Por Ej: $25.000" id="exampleInputPassword1">
+                                        placeholder="Por Ej: $25.000" id="exampleInputPassword1" autocomplete="off">
                                 </div>
                             </div>
                         </div>
@@ -153,7 +160,7 @@
                                 <div>
                                     <label for="exampleInputPassword1">Monto a Prestar</label>
                                     <input type="text" id="monto" class="form-control"
-                                        placeholder="Por Ej: 10.000, 50.000, 100.000" id="exampleInputPassword1">
+                                        placeholder="Por Ej: 10.000, 50.000, 100.000" id="exampleInputPassword1" autocomplete="off">
 
                                 </div>
                             </div>
@@ -161,7 +168,7 @@
                                 <div>
                                     <label for="exampleInputPassword1">Motivo de la Solicitud</label>
                                     <input type="text" id="motivo" class="form-control"
-                                        placeholder="Por Ej: Viaje, Vehiculo, Negocio, etc." id="exampleInputPassword1">
+                                        placeholder="Por Ej: Viaje, Vehiculo, Negocio, etc." id="exampleInputPassword1" autocomplete="off">
 
                                 </div>
                             </div>
@@ -169,7 +176,7 @@
                                 <div>
                                     <label for="exampleInputPassword1">Cuotas</label>
                                     <input type="text" id="cuotas" class="form-control" placeholder="Cuotas: 3,6,9,12"
-                                        id="exampleInputPassword1">
+                                        id="exampleInputPassword1" autocomplete="off">
                                 </div>
                             </div>
                         </div>
@@ -188,14 +195,14 @@
                                 <label for="exampleInputPassword1">Celular (Sin 0 ni 15)</label>
                                 <div class="">
                                     <input type="text" id="celular" class="form-control" placeholder="123 456 7890"
-                                        id="exampleInputPassword1">
+                                        id="exampleInputPassword1" autocomplete="off">
                                 </div>
                             </div>
                             <div class="form-group col-md-4 col-sm-12">
                                 <label for="exampleInputPassword1">Operadora</label>
                                 <div class="">
                                     <input type="text" id="operadora" class="form-control"
-                                        placeholder="Claro, Personal, Otro" id="exampleInputPassword1">
+                                        placeholder="Claro, Personal, Otro" id="exampleInputPassword1" autocomplete="off">
                                 </div>
                             </div>
                         </div>

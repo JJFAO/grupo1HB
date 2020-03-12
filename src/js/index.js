@@ -1,13 +1,9 @@
-
 const contactanos = document.querySelector("#contactar") 
-console.log(contactanos)
 
 let Consultas = JSON.parse(localStorage.getItem('Consultas'))
-console.log(Consultas)
 
 if (Consultas === null) {
     Consultas = []
-    console.log(Consultas)
 }
 
 //funciones
