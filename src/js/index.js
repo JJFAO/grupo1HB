@@ -1,27 +1,24 @@
-
 const contactanos = document.querySelector("#contactar") 
-console.log(contactanos)
 
 let Consultas = JSON.parse(localStorage.getItem('Consultas'))
-console.log(Consultas)
 
 if (Consultas === null) {
     Consultas = []
-    console.log(Consultas)
 }
 
 //funciones
 
 const crearConsulta = (nombre, apellido, email, telefono, consulta) => {
+   
     let nuevaConsulta = {
         Nombre: nombre,
         Apellido: apellido,
         Email: email,
         Telefono: telefono,
         Consultanueva: consulta
+    
     }
-    console.log(nuevaConsulta)
-    guardarConsulta(nuevaConsulta)
+    guardarConsulta();
 }
 
 const guardarConsulta = (dat) => {

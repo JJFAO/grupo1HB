@@ -1,5 +1,4 @@
 let formularioTarjeta = document.querySelector("#formularioTarjeta")
-console.log(formularioTarjeta)
 let botonUsuario = document.querySelector("#UsuarioBoton");
 let agregarNombre = document.querySelector("#nombre");
 let agregarApellido = document.querySelector("#apellido");
@@ -22,13 +21,9 @@ formularioTarjeta.addEventListener("submit", e => {
   e.preventDefault();
   let pedidoTarjeta=[]
   let ingreso = document.querySelector("#ingresomensual").value
-  Usuario[0].ingreso=ingreso
   let motivo = document.querySelector("#motivo").value
-  Usuario[0].motivo=motivo
   let celular = document.querySelector("#celular").value
-  Usuario[0].celular=celular
   let operadora = document.querySelector("#operadora").value
-  Usuario[0].operadora=operadora
   pedidoTarjeta.push(Usuario)
   localStorage.setItem('PedidosDeTarjetas', JSON.stringify(pedidoTarjeta))
   window.location.assign("usuarios.html")
