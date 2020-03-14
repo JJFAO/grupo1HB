@@ -4,7 +4,7 @@ const listaConsultas = document.querySelector("#mostrarconsulta");
 const listaUsuarios = document.querySelector("#aprobarUsuario")
 const cambios = document.querySelector("#cambios")
 
-//FUNCONES
+//FUNCIONES
 
 const mostrarConsulta = () => {
   let Consultas = JSON.parse(localStorage.getItem("Consultas"));
