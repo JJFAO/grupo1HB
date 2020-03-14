@@ -1,3 +1,4 @@
+
 const contactanos = document.querySelector("#contactar") 
 
 let Consultas = JSON.parse(localStorage.getItem('Consultas'))
@@ -18,7 +19,7 @@ const crearConsulta = (nombre, apellido, email, telefono, consulta) => {
         Consultanueva: consulta
     
     }
-    guardarConsulta();
+    guardarConsulta(nuevaConsulta);
 }
 
 const guardarConsulta = (dat) => {
