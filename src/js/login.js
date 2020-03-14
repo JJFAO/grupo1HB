@@ -43,9 +43,9 @@ const buscarUsuario = (nombre, passw) => {
     if (Usuarios == null) {
         mostrarMensajeError("No hay usuarios")
     } else {
-        //encontrado = 1 si es administrador
-        //encontrado = 2 si es usuario con CUIT
-        //encontrado = 3 si es usuario
+        //encontrado = 1 si es usuario
+        //encontrado = 2 si es usuario admin
+        //encontrado = 3 si es usuario con cuit
         
         for (let i = 0; i < Usuarios.length; i++) {
             const Usuario = Usuarios[i];
@@ -58,22 +58,19 @@ const buscarUsuario = (nombre, passw) => {
                 usuarioLoggeado.push(Usuario)
             }else if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin == 2)  && (Usuario.cliente == "Si")) {
                 encontrado = 3
-                usuarioLoggeado = {nombre: Usuario.nombre, id: Usuario.id, apellido: Usuario.apellido}
-                 usuario.push(Usuario)
+                usuarioLoggeado.push(Usuario)
+                usuario.push(Usuario)
             }else{
                 encontrdo = 0
             }
         }
         if (encontrado == 1) {
-            imprimir(usuarioLoggeado)
             localStorage.setItem("usuarioLoggeado", JSON.stringify(usuarioLoggeado))
             location.href = "usuarios.html"
         } else  if (encontrado == 2) {
-            imprimir(usuarioLoggeado)
             localStorage.setItem("usuarioLoggeado", JSON.stringify(usuarioLoggeado))
             location.href = "admin.html"
         }else  if (encontrado == 3) {
-            imprimir(usuarioLoggeado)
             localStorage.setItem("usuarioLoggeado", JSON.stringify(usuarioLoggeado))
             location.href = "usuarios.html" //aca si sos persona juridica
         }else{
@@ -82,12 +79,6 @@ const buscarUsuario = (nombre, passw) => {
     }
 }
 
-const imprimir = (usuario) => {
-    console.log("Bienvenido " +usuario[0].nombre+" "+usuario[0].apellido)
-    console.log(usuario[0].cliente+" eres cliente del banco")
-    console.log("tienes un credito de "+usuario[0].credito+" pesos")
-   // mostrarMensajeOk("Bienvenido " +usuario[0].nombre+" "+usuario[0].apellido+ +usuario[0].cliente+" eres cliente del banco."+ +"tienes un credito de "+usuario[0].credito+" pesos")
-}
 
 
 formLoginDom.addEventListener('submit', (e) => {

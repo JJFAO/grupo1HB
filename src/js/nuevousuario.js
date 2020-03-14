@@ -1,5 +1,4 @@
 const formNewDom = document.querySelector('#formularioRegistro')
-console.log(formNewDom)
 
 let Usuarios = JSON.parse(localStorage.getItem('Usuarios'))
 
@@ -53,7 +52,6 @@ const generarUsuario = (ID, Admin, Cliente, Nombre,Apellido,RazonSocial,TipoDoc,
         motivoPrestamo: Motivoprestamo,
         cuotas: Cuotas
     }
-    console.log(usuario)
     agregarUsuario(usuario)
 }
 
@@ -180,5 +178,6 @@ formNewDom.addEventListener('submit', (e) =>{
     let Credito = 0
 
     generarUsuario (ID, Admin, Cliente, Nombre,Apellido,RazonSocial,TipoDoc,DocNum,Fecha,Email,ConfEmail,Passw,ConfPassw,Credito,Genero, Ingreso, Motivo, Celular, Operadora, Montoaprestar, Motivoprestamo, Cuotas)
+    
     formNewDom.reset()
 })

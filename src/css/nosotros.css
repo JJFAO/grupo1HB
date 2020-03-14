@@ -1,0 +1,26 @@
+.titunos {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #2d2d44;
+}
+
+.cardsNos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.cardsNos p {
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#colorcard {
+   background-color: #2d2d44 !important;
+}
+#cardind {
+    margin-bottom: 1rem;
+}

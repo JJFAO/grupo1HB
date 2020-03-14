@@ -1,4 +1,6 @@
-
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
 .main{
     background-color: #2d2d44;
 }
@@ -24,7 +26,7 @@
 }
 /*contact form*/
 .maintitle{
-   font-size: 2.5em;
+    font-size: 2.5em;
    color: #2d2d44;
    padding: 1.2rem;
 }
@@ -51,3 +53,10 @@
     width: 80%;
 }
 
+.btn-bank{
+    background-color: #33e1ed !important;
+    font-size: 2em !important;
+    padding-left: 10px !important; 
+    padding-right: 10px !important;
+
+}
