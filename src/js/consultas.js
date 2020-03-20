@@ -8,7 +8,7 @@ const cambiosPrestamos = document.querySelector("#cambiosPrestamos")
 const listaTarjetas = document.querySelector("#listaTarjetas")
 const cambiosTarjeta = document.querySelector("#cambiosTarjeta")
 
-//FUNCONES
+//FUNCIONES
 
 const mostrarConsulta = () => {
   let Consultas = JSON.parse(localStorage.getItem("Consultas"));
