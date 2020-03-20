@@ -7,12 +7,11 @@
     <link rel="icon" type="image/png" href="assets/img/favicon.ico" />
     <title>RollingBank Administrador</title>
     <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/index.css">
-    <link rel="stylesheet" href="src/css/main.css">
-    <link rel="stylesheet" href="src/css/footer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/f40d0764a0.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/f40d0764a0.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 
 <body>
@@ -27,7 +26,7 @@
 
                     </div>
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="index.html" style="text-decoration: none;">
                             <h1 class="h1color">Rolling Bank</h1>
                             <h6 class="h6color d-none d-md-block">Donde quiera que estés</h6>
                         </a>
@@ -49,7 +48,7 @@
     </header>
     <!-- termina navbarAndres -->
 
-    <div>
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -72,18 +71,20 @@
                         aria-labelledby="v-pills-home-tab">
                         <h1>Aprobar Usuarios Nuevos</h1>
                         <form id="cambios">
-                            <table class="table table-dark">
-                                <thead>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Apellido</th>
-                                    <th scope="col">DNI</th>
-                                    <th scope="col">Aprobar</th>
-                                </thead>
-                                    <tbody id="aprobarUsuario">
-                                        
-                                    </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-dark">
+                                    <thead>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Apellido</th>
+                                        <th scope="col">DNI</th>
+                                        <th scope="col">Aprobar</th>
+                                    </thead>
+                                        <tbody id="aprobarUsuario">
+                                            
+                                        </tbody>
+                                </table>
+                            </div>
                             <button type="submit" class="btn btn-primary mb-2 ml-2">Aplicar</button>
                         </form>
                     </div>
@@ -91,20 +92,21 @@
                         aria-labelledby="v-pills-profile-tab">
                         <h1>Aprobar Tarjetas de Crédito</h1>
                         <form id="cambiosTarjeta">
-                            <table class="table table-dark">
-                                <thead>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">DNI</th>
-                                    <th scope="col">Ingresos</th>
-                                    <th scope="col">Motivo</th>
-                                    <th scope="col">Estado</th>
-                                </thead>
-                                <tbody  id="listaTarjetas">
-    
-                                </tbody>
-    
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-dark">
+                                    <thead>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">DNI</th>
+                                        <th scope="col">Ingresos</th>
+                                        <th scope="col">Estado</th>
+                                    </thead>
+                                    <tbody  id="listaTarjetas">
+        
+                                    </tbody>
+        
+                                </table>
+                            </div>
                             <button type="submit" class="btn btn-primary mb-2 ml-2">Aplicar</button>
                         </form>
                     </div>
@@ -112,38 +114,42 @@
                         aria-labelledby="v-pills-messages-tab">
                         <h1>Aprobar Prestamos</h1>
                         <form id="cambiosPrestamos">
-                            <table class="table table-dark">
-                                <thead>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">DNI</th>
-                                    <th scope="col">monto</th>
-                                    <th scope="col">motivo</th>
-                                    <th scope="col">cuotas</th>
-                                    <th scope="col">celular</th>
-                                </thead>
-                                <tbody id="listaPrestamos">
-                                    
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-dark">
+                                    <thead>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">DNI</th>
+                                        <th scope="col">monto</th>
+                                        <th scope="col">motivo</th>
+                                        <th scope="col">cuotas</th>
+                                        <th scope="col">Estado</th>
+                                    </thead>
+                                    <tbody id="listaPrestamos">
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
                             <button type="submit" class="btn btn-primary mb-2 ml-2">Aplicar</button>
                         </form>
                     </div>
                     <div class="tab-pane fade" id="v-pills-consulta" role="tabpanel"
                         aria-labelledby="v-pills-consulta-tab">
                         <h1>Consultas</h1>
-                        <table class="table table-dark">
-                            <thead>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Apellido</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Telefono</th>
-                                <th scope="col">Consulta</th>
-                            </thead>
-                            <tbody id="mostrarconsulta">
-                                
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-dark">
+                                <thead>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Telefono</th>
+                                    <th scope="col">Consulta</th>
+                                </thead>
+                                <tbody id="mostrarconsulta">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -188,7 +194,10 @@
             reservados.</p>
     </footer>
 
-    <script src="js/modal.js"></script>
+        <!--Se usa para mostrar msje-->
+     <div id = "idMensaje"> </div>
+
+     <script src="src/js/modal.js"></script>
     <script src="src/js/consultas.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

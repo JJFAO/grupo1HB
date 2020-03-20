@@ -1,55 +1,1096 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-.logo a{
-    text-decoration: none;
-    
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
 }
 
-.imagen{
-    width: 100px;
-    height: 100px;
-    position: relative;
-    transition-duration: 3s;
-    animation: img 5s infinite;
+.logo a {
+  text-decoration: none;
 }
 
-@keyframes img{
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-       transform: rotateY(360deg);
-    }
+.imagen {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transition-duration: 3s;
+  animation: img 5s infinite;
 }
 
-.backgroundnav{
-   background: #1e1e2c;
+@keyframes img {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
-.h1color{
-    color: white;
+.backgroundnav {
+  background: #1e1e2c;
 }
 
-.h6color{
-    color: white;
-    text-align: center;
+.h1color {
+  color: white;
 }
 
-.listageneral a{
-    color: white !important;
-    text-decoration: none;
-    font-size: 21px;
-
+.h6color {
+  color: white;
+  text-align: center;
 }
 
-.listageneral ul li{
-    list-style-type:none;
-    margin-left: 2vw;
+.listageneral a {
+  color: white !important;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
-.icono{
-    background: white;
+.listageneral ul li {
+  list-style-type: none;
+  margin-left: 2vw;
+}
+
+.icono {
+  background: white;
+}
+
+.foot {
+  background-color: #1e1e2c;
+}
+
+.redicon {
+  margin-bottom: 1em;
+}
+
+.titlefoot {
+  color: #ffffff;
+}
+
+.subtitulofoot {
+  font-size: 3.5em;
+  font-weight: 300;
+}
+
+.iconfoot a {
+  text-decoration: none;
+  color: #33e1ed;
+  font-size: 2rem;
+  margin: 1em;
+}
+
+.iconfoot i:hover {
+  color: #ffffff;
+  transition: ease-in-out 0.5s;
+  transform: scale(1.3);
+}
+
+#text-blue {
+  color: #33e1ed;
+}
+
+.textfoot {
+  font-size: 1.3em;
+  color: #ffffff;
+}
+
+@media (min-width: 200px) and (max-width: 700px) {
+  .foot br {
+    display: none;
+  }
+
+  .iconfoot a {
+    margin: 10px;
+  }
+
+  .subtitulofoot {
+    font-size: 2.6em;
+  }
+}
+
+.offer {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  -webkit-box-shadow: 3px 3px 11px 2px #000000;
+  box-shadow: 3px 3px 11px 2px #000000;
+}
+
+.offer h5 {
+  text-align: center !important;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.offer a {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(51, 224, 237, 0.137);
+  font-weight: 300;
+}
+
+.offer a:hover {
+  background-color: rgba(51, 225, 237, 0.7);
+  color: black;
+}
+
+.trans {
+  opacity: 0.7;
+}
+
+.imgOffer1 {
+  background-image: url(../../assets/img/master-card-visa-credit-card-gold.jpg);
+  height: 85vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.imgOffer2 {
+  background-image: url(../../assets/img/rolling.jpg);
+  height: 85vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.imgOffer3 {
+  background-image: url(../../assets/img/white-and-brown-concrete-bungalow-under-clear-blue.jpg);
+  height: 85vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.imgOffer4 {
+  background-image: url(../../assets/img/woman-holding-card-with-macbook-air-on-lap.jpg);
+  height: 85vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.imgOffer5 {
+  background-image: url(../../assets/img/group-of-people-standing-on-beach-shore-1427741.jpg);
+  height: 85vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.imgOffer6 {
+  background-image: url(../../assets/img/food-dinner-lunch-unhealthy.jpg);
+  height: 85vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.circulo li {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
+}
+
+.left-container {
+  background: linear-gradient(125deg, #33e1ed, #2d2d44, #1e1e2c);
+  margin-bottom: -56px;
+}
+
+/* Logo */
+.div-logo {
+  padding-top: 45px;
+}
+
+.div-logo .link-logo {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.title-logo {
+  font-size: 3.5em;
+}
+
+.img-logo {
+  width: 5vw;
+  max-width: 10%;
+  height: auto;
+  margin-left: 20px;
+}
+
+/* Style the buttons that are used to open the tab content */
+
+
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: #ffffff;
+  padding: 30px 0px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: right;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 3em;
+}
+
+.tab button i {
+  margin-right: 4vw;
+  margin-top: 20px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: rgba(221, 221, 221, 0.03);
+  border-radius: 40%;
+}
+
+/* Create a active "tab button" class */
+.tab button:active {
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+/* Create a Triangle tab  */
+.tablinks.active .triangle-left::before {
+  display: block;
+}
+
+.tablinks.active .triangle-right::before {
+  display: block;
+}
+
+.triangle-left::before {
+  display: none;
+  content: "";
+  border-bottom: 55px solid transparent;
+  border-right: 55px solid #33e1ed;
+  border-top: 55px solid transparent;
+  bottom: 25px;
+  height: 0;
+  position: relative;
+  right: -15px;
+  width: 0;
+}
+
+.triangle-right::before {
+  display: none;
+  content: "";
+  border-bottom: 55px solid transparent;
+  border-right: 55px solid #33e1ed;
+  border-top: 55px solid transparent;
+  bottom: 25px;
+  height: 0;
+  position: relative;
+  right: -15px;
+  width: 0;
+}
+
+.tab .tablinks {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tab button i {
+  margin-right: 4vw;
+}
+
+/* Social Media & CR */
+.social-media {
+  color: #ffffff;
+  font-size: small;
+  margin-bottom: 10px;
+}
+
+.icon-media a {
+  text-decoration: none;
+  font-size: 2em;
+  color: #ffffff;
+  margin: 5px;
+}
+
+/* Side right */
+body{
+  background-color:  #33e1ed
+}
+.form-container {
+  background-color: #33e1ed;
+  display: flex;
+  justify-content: center;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.subtitle-form {
+  font-size: 2.3em;
+}
+
+.title-form {
+  font-size: 3em;
+}
+
+.form-box h4 {
+  font-weight: lighter;
+  color: #1e1e2c;
+  font-size: 1.4em;
+}
+
+.form-box .form-input {
+  position: relative;
+}
+
+.form-box .form-input input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #ffffff;
+  padding-left: 45px;
+}
+
+.form-box .form-input span {
+  position: absolute;
+  top: 8px;
+  padding-left: 20px;
+  color: #1e1e2c;
+}
+
+.form-box .form-input input::placeholder {
+  padding-left: 0px;
+}
+
+.form-box .form-input input:focus,
+.form-box .form-input input:valid {
+  border-bottom: 2px solid #1e1e2c;
+}
+
+.form-box input[type="checkbox"]:not(:checked) + label:before {
+  background: transparent;
+  border: 2px solid #1e1e2c;
+  width: 15px;
+  height: 15px;
+}
+
+.form-box
+  .custom-checkbox
+  .custom-control-input:checked
+  ~ .custom-control-label::before {
+  background-color: #1e1e2c;
+  border: 0px;
+}
+
+.form-box button[type="submit"] {
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #2d2d44;
+  color: #ffffff;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+/* This is shadow login */
+.form-box button[type="submit"]:hover {
+  -webkit-box-shadow: 0px 13px 17px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 13px 17px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 13px 17px -4px rgba(0, 0, 0, 0.75);
+}
+.form-box button[type="button"] {
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #2d2d44;
+  color: #ffffff;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+/* This is shadow login */
+.form-box button[type="button"]:hover {
+  -webkit-box-shadow: 0px 13px 17px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 13px 17px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 13px 17px -4px rgba(0, 0, 0, 0.75);
+}
+
+/* This is color of "olvide la contraseña" */
+.forget-link,
+.register-link {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.forget-link:hover,
+.register-link:hover {
+  color: #2d2d44;
+}
+
+.text-signup {
+  color: #2d2d44;
+  font-weight: lighter;
+  font-size: 1.3em;
+}
+
+/* Button go to persona-empresa */
+
+.ir-empresa, .ir-persona {
+  display: inline-block;
+  padding: 20px;
+  background-color: #2d2d44;
+  color: #ffffff;
+  font-size: 1.3rem;
+  border-radius: 33% 5%;
+}
+
+@media screen and (max-width: 767px) {
+  .ir-empresa {
+    display: inline-block;
+    background-color: #2d2d44;
+    color: #ffffff;
+    font-size: 1.3rem;
+    border-radius: 33% 5%;
+    cursor: pointer;
+    position: absolute;
+    bottom: 42px;
+    right: 36vw;
+  }
+
+  .ir-persona {
+    display: inline-block;
+    background-color: #2d2d44;
+    color: #ffffff;
+    font-size: 1.3rem;
+    border-radius: 33% 5%;
+    cursor: pointer;
+    position: absolute;
+    bottom: -45px;
+    right: 36vw;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .form-box button[type="submit"] {
+    width: 130px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 888px) {
+  .img-logo {
+    display: none;
+  }
+}
+
+.main {
+  background-color: #2d2d44;
+}
+
+.btn-bank a {
+  text-decoration: none !important;
+  color: #ffffff !important;
+}
+
+.iconos {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .btn-bank {
+    width: auto;
+  }
+}
+
+/*contact form*/
+.maintitle {
+  font-size: 2.5em;
+  color: #2d2d44;
+  padding: 1.2rem;
+}
+
+.contact {
+  background-color: #33e1ed;
+}
+
+.btn-sub {
+  background-color: #1e1e2c !important;
+  color: #ffffff !important;
+  font-size: 20px;
+}
+
+.btn-sub:hover {
+  color: white;
+  box-shadow: 0px 13px 10px -4px rgba(0, 0, 0, 0.507);
+}
+
+.borderbox:hover {
+  box-shadow: 0px 13px 10px -4px rgba(0, 0, 0, 0.507);
+}
+
+.centrar div {
+  justify-content: center;
+}
+
+.centrar {
+  width: 80%;
+}
+
+.btn-bank {
+  background-color: #33e1ed !important;
+  font-size: 2em !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+/* Full-width input fields */
+.containermodal input[type="text"],
+.containermodal input[type="password"],
+.containermodal input[type="email"],
+.containermodal input[type="date"],
+select {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: rgba(204, 204, 207, 0.473);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.tipo-documento {
+  width: 100%;
+  padding: 0 !important;
+  margin: 5px 0 22px 0;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+label {
+  display: block;
+  font: 1rem "Fira Sans", sans-serif;
+}
+
+/* Add a background color when the inputs get focus */
+.containermodal input[type="text"]:focus,
+.containermodal input[type="password"]:focus,
+.containermodal input[type="email"]:focus,
+.tipo-documento:focus,
+input[type="date"]:focus {
+  background-color: rgba(51, 224, 237, 0.185);
+  outline: none;
+  border-bottom: 2px solid #1e1e2c;
+}
+
+/* Set a style for all buttons */
+.cancelbtn,
+.signupbtn {
+  padding: 14px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  width: 90%;
+  opacity: 0.9;
+  transition: 0.2s;
+  background-color: #2d2d44;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #2d2d44;
+  border-radius: 5%;
+}
+
+.cancelbtn:hover {
+  opacity: 0.8;
+  background-color: rgb(255, 0, 0);
+}
+
+.signupbtn {
+  border-radius: 5%;
+  padding: 14px 20px;
+  background-color: #2d2d44;
+}
+
+.signupbtn:hover {
+  opacity: 0.8;
+  background-color: #4caf50;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.containermodal {
+  padding: 30px;
+  border: 1px solid #1e1e2c;
+}
+
+/* The Modal (background) */
+.modal {
+  z-index: 10000;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  overflow: scroll;
+  /* Enable scroll if needed */
+  background-color: transparent;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box  no necesario*/
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+}
+
+.fecha {
+  background: rgba(204, 204, 207, 0.473);
+  margin-bottom: 18px;
+  margin-right: 7px;
+  padding-bottom: 0;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-radius: 5px;
+}
+
+/* checked boton*/
+.modal input[type="checkbox"]:not(:checked) + label:before {
+  background: transparent;
+  border: 2px solid #1e1e2c;
+  width: 15px;
+  height: 15px;
+}
+
+.modal
+  .custom-checkbox
+  .custom-control-input:checked
+  ~ .custom-control-label::before {
+  background-color: #1e1e2c;
+  border: 0px;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+  }
+
+  .fechanac {
+    font-size: 0.6em;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .boxtipo {
+    font-size: 0.8em;
+    padding-left: 5px;
+  }
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.imagen {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transition-duration: 3s;
+  animation: img 5s infinite;
+}
+
+@keyframes img {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.backgroundnav {
+  background: #1e1e2c;
+}
+
+.h1color {
+  color: white;
+}
+
+.h6color {
+  color: white;
+  text-align: center;
+}
+
+.listageneral a {
+  color: white !important;
+  text-decoration: none;
+  font-size: 21px;
+}
+
+.listageneral ul li {
+  list-style-type: none;
+  margin-left: 2vw;
+}
+
+.icono {
+  background: white;
+}
+
+.drop-menus a {
+  color: black !important;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropDownBtn {
+  color: white;
+}
+
+.dropDownBtn:hover {
+  color: white;
+  background-color: #1e1e2c;
+}
+
+.dropDown-Content {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropDown-Content {
+  display: block;
+}
+
+.divPersonas {
+  background-image: url("../../assets/imagenes/familia2.png");
+  background-attachment: fixed;
+  width: 100%;
+  height: 85vh;
+}
+
+.divTarjetaDeCredito {
+  background-image: url("../../assets/imagenes/Tarjeta2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 85vh;
+}
+
+.divCuentasSanas {
+  background-image: url("../../assets/imagenes/cuentassanas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 85vh;
+}
+
+#columna1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/imagenes/imagenIzq.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#infocolumna1m {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+#columna1m:hover #infocolumna1m {
+  opacity: 1;
+}
+
+#infoTop {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 160px;
+  position: absolute;
+  color: black;
+}
+
+#infoDown {
+  margin: auto;
+  width: 100%;
+  margin-top: 130px;
+  position: absolute;
+  color: black;
+  text-align: center;
+}
+
+#columna1m:hover #infoDown {
+  padding-top: 130px;
+}
+
+#columna2 {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/imagenes/sueldomedio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#infocolumna2m {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+#columna2m:hover #infocolumna2m {
+  opacity: 1;
+}
+
+#infoTop2 {
+  padding-left: 40%;
+  padding-right: 40%;
+  padding-top: 160px;
+  position: absolute;
+  color: black;
+}
+
+#infoDown2 {
+  margin: auto;
+  width: 100%;
+  margin-top: 130px;
+  position: absolute;
+  color: black;
+  text-align: center;
+}
+
+#columna2m:hover #infoDown2 {
+  padding-top: 130px;
+}
+
+#columna3 {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/imagenes/beneficiosderecha.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#infocolumna3m {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+#columna3m:hover #infocolumna3m {
+  opacity: 1;
+}
+
+#infoTop3 {
+  padding-left: 40%;
+  padding-right: 40%;
+  padding-top: 160px;
+  position: absolute;
+  color: black;
+}
+
+#infoDown3 {
+  margin: auto;
+  width: 100%;
+  margin-top: 130px;
+  position: absolute;
+  color: black;
+  text-align: center;
+}
+
+#columna3m:hover #infoDown3 {
+  padding-top: 130px;
+}
+
+.divCarouselFinal {
+  width: 100vw;
+  height: 85vh;
+}
+
+.subnavbartarjetas ul li a {
+  color: black;
+}
+
+.columasUsuario a {
+  text-decoration: none;
+  color: white;
+}
+
+.divcuentas {
+  width: 100%;
+  height: 100vh;
+}
+
+.divcuentas2 {
+  background-color: #1e1e2c;
+  height: 100vh;
+}
+
+.divcuentas2 a {
+  color: white;
+}
+
+.divrow {
+  margin: 0;
+  padding: 0;
+}
+
+.botonformulario {
+  width: 200px;
+}
+
+.recibodetarjeta {
+  height: 100vh;
+}
+
+/*  */
+
+.divcuentas2 {
+  width: 100%;
+  height: 100vh;
+}
+
+.divcuentas3 {
+  background-color: #1e1e2c;
+  height: 100vh;
+}
+
+.divcuentas3 a {
+  color: white;
+}
+
+.divrow2 {
+  margin: 0;
+  padding: 0;
+}
+
+.formulariodesueldo2 {
+  width: 700px;
+}
+
+.botonformulario2 {
+  width: 200px;
+}
+
+.recibodetarjeta2 {
+  height: 100vh;
+}
+
+.imagencuentassanas {
+  width: 47%;
+  margin: 30px 100px 20px;
+}
+.btn {
+  background: #46535300;
+  -webkit-box-shadow: 32px 25px 45px 0px #000000;
+  box-shadow: 32px 25px 45px 0px #000000;
+}
+
+.fa-times-circle-o {
+  color: red;
+
+  border-radius: 50%;
+}
+
+.fa-check-circle-o {
+  color: green;
+  border-radius: 50%;
+}
+
+.fa-window-close-o {
+  color: red;
+  border-radius: 50%;
+}
+.modal-body {
+  background: #1e1e2c;
+}
+.modal-footer {
+  background: #1e1e2c;
+}
+.modal-body p {
+  color: white;
+}
+.modal-footer {
+  border-top: #1e1e2c;
+}
+.close {
+  color: white;
+}
+.titunos {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #2d2d44;
+}
+
+.cardsNos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.cardsNos p {
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+#colorcard {
+ background-color: #2d2d44 !important;
+}
+#cardind {
+  margin-bottom: 1rem;
 }

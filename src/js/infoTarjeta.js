@@ -8,8 +8,8 @@ let agregarEmail = document.querySelector("#email")
 let formularioTarjeta = document.querySelector("#formularioTarjeta")
 let mostrarTarjeta = document.querySelector("#mostrarTarjeta")
 let pedirTarjeta = document.querySelector("#pedirTarjeta")
-let usuarioLoggeado = JSON.parse(localStorage.getItem('usuarioLoggeado'));
 
+let usuarioLoggeado = JSON.parse(localStorage.getItem('usuarioLoggeado'));
 botonUsuario.innerHTML = usuarioLoggeado[0].nombre + " " + usuarioLoggeado[0].apellido;
 agregarNombre.value = usuarioLoggeado[0].nombre;
 agregarApellido.value = usuarioLoggeado[0].apellido;
@@ -21,21 +21,29 @@ agregarEmail.value = usuarioLoggeado[0].email;
 
 const mostrar = () => {
   let pedidosTarjeta = JSON.parse(localStorage.getItem("pedidosTarjeta"));
-  if (usuarioLoggeado === null) {
-    usuarioLoggeado = [];
+  if (pedidosTarjeta === null) {
+    pedidosTarjeta = [];
   } else {
     pedidosTarjeta.forEach(prestamo => {
-      
       let usuarioLoggeado = JSON.parse(localStorage.getItem("usuarioLoggeado"));
       if ((prestamo.estado != "Pendiente") && (prestamo.id == usuarioLoggeado[0].id)) {
         mostrarTarjeta.innerHTML = `
+        <h2 class="text-center my-5">Ya tienes una terjeta</h2>
+          <div class=" container card text-center" style="width: 18rem;">
+            <div class="card-body">
+              <h1 class="card-title">Se activará en el primer uso</h1>
+            </div>
+          </div><br>`;
+        pedirTarjeta.className = "d-none"
+      } else if (prestamo.id == usuarioLoggeado[0].id) {
+        mostrarTarjeta.innerHTML = `
         <h2 class="text-center my-5">Ya pediste una terjeta</h2>
-        <div class=" container card text-center" style="width: 18rem;">
-  <div class="card-body">
-    <h1 class="card-title">Se activará en el primer uso</h1>
-  </div>
-</div><br>`;
-pedirTarjeta.className="d-none"
+          <div class=" container card text-center" style="width: 18rem;">
+            <div class="card-body">
+              <h1 class="card-title">Espera a que tu solicitud sea prosesada. gracias</h1>
+            </div>
+          </div><br>`;
+        pedirTarjeta.className = "d-none"
       }
     });
   }
@@ -55,7 +63,6 @@ formularioTarjeta.addEventListener("submit", e => {
     nombre: usuarioLoggeado[0].nombre,
     dni: usuarioLoggeado[0].docNum,
     ingreso: document.querySelector("#ingresomensual").value,
-    motivo: document.querySelector("#motivo").value,
     celular: document.querySelector("#celular").value,
     estado: "Pendiente"
   };

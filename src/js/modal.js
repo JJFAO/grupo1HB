@@ -1,6 +1,6 @@
 
 
-function mostrarMensajeOk(mjerror){
+function mostrarMensajeOk(mensaje){
 
    var para = document.createElement ("div")
    var template = `<div class="modal" tabindex="-1" role="dialog" id="modalmensaje">
@@ -12,7 +12,7 @@ function mostrarMensajeOk(mjerror){
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
            <span aria-hidden="true">&times;</span>
          </button>
-           <p id="idMensaje" class=" d-flex justify-content-center">${mjerror} </p> 
+           <p id="idMensaje" class=" d-flex justify-content-center">${mensaje}</p> 
        </div>
        <div class="modal-footer d-flex justify-content-center">
          <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Aceptar</button>
@@ -27,7 +27,7 @@ function mostrarMensajeOk(mjerror){
     $('#modalmensaje').modal('show')
 }
 
-function mostrarMensajeError(mjerror){
+function mostrarMensajeError(mensaje){
 
     var para = document.createElement ("div")
     var template = `<div class="modal" tabindex="-1" role="dialog" id="modalmensaje">
@@ -39,7 +39,7 @@ function mostrarMensajeError(mjerror){
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-            <p id="idMensaje" class=" d-flex justify-content-center">${mjerror} </p> 
+            <p id="idMensaje" class=" d-flex justify-content-center">${mensaje}</p> 
         </div>
         <div class="modal-footer d-flex justify-content-center">
           

@@ -7,8 +7,9 @@ let agregarFechaNac = document.querySelector("#fechanac");
 let agregarGenero = document.querySelector("#genero");
 let agregarEmail = document.querySelector("#email");
 let mostrarPrestamo = document.querySelector("#mostrarPrestamo");
-
+let mostrarTotalDOM =  document.querySelector("#total");
 let usuarioLoggeado = JSON.parse(localStorage.getItem("usuarioLoggeado"));
+
 
 botonUsuario.innerHTML = usuarioLoggeado[0].nombre + " " + usuarioLoggeado[0].apellido;
 agregarNombre.value = usuarioLoggeado[0].nombre;
@@ -20,25 +21,24 @@ agregarEmail.value = usuarioLoggeado[0].email;
 
 const mostrar = () => {
   let pedidosPrestamos = JSON.parse(localStorage.getItem("pedidosPrestamos"));
-  if (usuarioLoggeado === null) {
-    usuarioLoggeado = [];
+  if (pedidosPrestamos === null) {
+    pedidosPrestamos = [];
   } else {
     pedidosPrestamos.forEach(prestamo => {
-      
       let usuarioLoggeado = JSON.parse(localStorage.getItem("usuarioLoggeado"));
-      if ((prestamo.cursando == "Si") && (prestamo.id == usuarioLoggeado[0].id)) {
+      if ((prestamo.estado == "Aprobado") && (prestamo.id == usuarioLoggeado[0].id)) {
         mostrarPrestamo.innerHTML += `
                                     <table class="table table-dark">
                                         <thead>
-                                            <th scope="col">monto</th>
-                                            <th scope="col">motivo</th>
-                                            <th scope="col">cuotas</th>
+                                            <th scope="col" class="text-center">monto</th>
+                                            <th scope="col" class="text-center">motivo</th>
+                                            <th scope="col" class="text-center">cuotas</th>
                                         </thead>
-                                        <tbody id="listaPrestamos">
+                                        <tbody >
                                         <tr>
-                                            <td>$${prestamo.monto}</td>
-                                            <td>${prestamo.motivo}</td>
-                                            <td>${prestamo.cuotas}</td>
+                                            <td class="text-center" id="listaPrestamos">${prestamo.monto}</td>
+                                            <td class="text-center">${prestamo.motivo}</td>
+                                            <td class="text-center">${prestamo.cuotas}</td>
                                         </tr>
                                         </tbody>
                                     </table>`;
@@ -47,7 +47,19 @@ const mostrar = () => {
   }
 };
 
+const mostrarTotal =()=>{
+  let total = document.querySelectorAll("#listaPrestamos");
+  let Total=0
+  for (let index = 0; index < total.length; index++) {
+    const element = total[index].textContent;
+    Total=Total + parseInt(total[index].textContent)
+  }
+  mostrarTotalDOM.innerHTML = `<h3 style="color: white; background-color: red;">Total: $ ${Total}</h3>`
+}
+
+
 document.addEventListener("DOMContentLoaded", mostrar);
+document.addEventListener("DOMContentLoaded", mostrarTotal);
 
 formularioTarjeta.addEventListener("submit", e => {
   e.preventDefault();
@@ -61,11 +73,10 @@ formularioTarjeta.addEventListener("submit", e => {
     nombre: usuarioLoggeado[0].nombre,
     dni: usuarioLoggeado[0].docNum,
     monto: document.querySelector("#monto").value,
-    motivo: document.querySelector("#motivo").value,
     cuotas: document.querySelector("#cuotas").value,
     celular: document.querySelector("#celular").value,
-    estado: "Pendiente",
-    cursando:"No"
+    motivo: document.querySelector("#motivo").value,
+    estado: "Pendiente"
   };
 
   pedidosPrestamos.push(pedidoPrestamo);

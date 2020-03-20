@@ -1,5 +1,5 @@
-
 const contactanos = document.querySelector("#contactar") 
+
 
 let Consultas = JSON.parse(localStorage.getItem('Consultas'))
 
@@ -10,24 +10,21 @@ if (Consultas === null) {
 //funciones
 
 const crearConsulta = (nombre, apellido, email, telefono, consulta) => {
-   
     let nuevaConsulta = {
         Nombre: nombre,
         Apellido: apellido,
         Email: email,
         Telefono: telefono,
         Consultanueva: consulta
-    
     }
-    guardarConsulta(nuevaConsulta);
+    guardarConsulta(nuevaConsulta)
 }
 
 const guardarConsulta = (dat) => {
     Consultas.push(dat)
-    console.log(Consultas)
     localStorage.setItem('Consultas', JSON.stringify(Consultas))
-    mostrarMensajeOk("Tu consulta fue enviada")
-    //window.location.assign("index.html")
+    mostrarMensajeOk("Tu consulta fue enviada...")
+
 }
 
 const borraarLogueado = () =>{
@@ -37,20 +34,13 @@ const borraarLogueado = () =>{
 //evento
 contactanos.addEventListener('submit', (e) =>{
     e.preventDefault()
-// agrego if-----------------------------------------------------------------------------
 
-let nombre = contactanos.querySelector('[name=Nombre]').value
-let apellido = contactanos.querySelector('[name=Apellido]').value
-let email = contactanos.querySelector('[name=Email]').value
-let telefono = contactanos.querySelector('[name=Telefono]').value
-let consulta = contactanos.querySelector('[name=Consulta]').value
-
-if(nombre != "" && apellido != "" && email != "" && telefono != ""&& consulta != "") {
+    let nombre = contactanos.querySelector('[name=Nombre]').value
+    let apellido = contactanos.querySelector('[name=Apellido]').value
+    let email = contactanos.querySelector('[name=Email]').value
+    let telefono = contactanos.querySelector('[name=Telefono]').value
+    let consulta = contactanos.querySelector('[name=Consulta]').value
 
     crearConsulta(nombre,apellido,email,telefono,consulta)
     contactanos.reset()
-}
-else{
-    mostrarMensajeError("Campos incompletos")
-}
 })
