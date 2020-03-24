@@ -5,6 +5,16 @@
   font-size: 16px;
 }
 
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .logo a {
   text-decoration: none;
 }
@@ -308,9 +318,10 @@
 }
 
 /* Side right */
-body{
-  background-color:  #33e1ed
+body {
+  background-color: #33e1ed
 }
+
 .form-container {
   background-color: #33e1ed;
   display: flex;
@@ -369,17 +380,14 @@ body{
   border-bottom: 2px solid #1e1e2c;
 }
 
-.form-box input[type="checkbox"]:not(:checked) + label:before {
+.form-box input[type="checkbox"]:not(:checked)+label:before {
   background: transparent;
   border: 2px solid #1e1e2c;
   width: 15px;
   height: 15px;
 }
 
-.form-box
-  .custom-checkbox
-  .custom-control-input:checked
-  ~ .custom-control-label::before {
+.form-box .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
   background-color: #1e1e2c;
   border: 0px;
 }
@@ -402,6 +410,7 @@ body{
   -moz-box-shadow: 0px 13px 17px -4px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 13px 17px -4px rgba(0, 0, 0, 0.75);
 }
+
 .form-box button[type="button"] {
   border: none;
   cursor: pointer;
@@ -441,7 +450,8 @@ body{
 
 /* Button go to persona-empresa */
 
-.ir-empresa, .ir-persona {
+.ir-empresa,
+.ir-persona {
   display: inline-block;
   padding: 20px;
   background-color: #2d2d44;
@@ -672,23 +682,21 @@ input[type="date"]:focus {
 }
 
 /* checked boton*/
-.modal input[type="checkbox"]:not(:checked) + label:before {
+.modal input[type="checkbox"]:not(:checked)+label:before {
   background: transparent;
   border: 2px solid #1e1e2c;
   width: 15px;
   height: 15px;
 }
 
-.modal
-  .custom-checkbox
-  .custom-control-input:checked
-  ~ .custom-control-label::before {
+.modal .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
   background-color: #1e1e2c;
   border: 0px;
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
+
   .cancelbtn,
   .signupbtn {
     width: 100%;
@@ -696,6 +704,7 @@ input[type="date"]:focus {
 }
 
 @media screen and (max-width: 479px) {
+
   .cancelbtn,
   .signupbtn {
     width: 100%;
@@ -1032,6 +1041,7 @@ input[type="date"]:focus {
   width: 47%;
   margin: 30px 100px 20px;
 }
+
 .btn {
   background: #46535300;
   -webkit-box-shadow: 32px 25px 45px 0px #000000;
@@ -1053,21 +1063,27 @@ input[type="date"]:focus {
   color: red;
   border-radius: 50%;
 }
+
 .modal-body {
   background: #1e1e2c;
 }
+
 .modal-footer {
   background: #1e1e2c;
 }
+
 .modal-body p {
   color: white;
 }
+
 .modal-footer {
   border-top: #1e1e2c;
 }
+
 .close {
   color: white;
 }
+
 .titunos {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -1089,8 +1105,9 @@ input[type="date"]:focus {
 }
 
 #colorcard {
- background-color: #2d2d44 !important;
+  background-color: #2d2d44 !important;
 }
+
 #cardind {
   margin-bottom: 1rem;
 }

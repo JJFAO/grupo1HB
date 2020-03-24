@@ -46,9 +46,13 @@ const buscarUsuario = (nombre, passw) => {
         for (let i = 0; i < Usuarios.length; i++) {
             const Usuario = Usuarios[i];
 
-            if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin == 0) && (Usuario.cliente == "Si")) {
-                encontrado = 1
-                usuarioLoggeado.push(Usuario)
+            if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin == 0) && ((Usuario.cliente == "Si") || (Usuario.cliente == "No admitir"))) {
+                if (Usuario.cliente == "No admitir") {
+                    encontrado=4
+                }else{
+                    encontrado = 1
+                    usuarioLoggeado.push(Usuario)
+                }
             } else if (((Usuario.nombre == usuario) || (Usuario.email == usuario)) && (Usuario.passw == pasword) && (Usuario.admin == 1)  && (Usuario.cliente == "Si")) {
                 encontrado = 2
                 usuarioLoggeado.push(Usuario)
@@ -63,16 +67,18 @@ const buscarUsuario = (nombre, passw) => {
         if (encontrado == 1) {
             localStorage.setItem("usuarioLoggeado", JSON.stringify(usuarioLoggeado))
             location.href = "usuarios.html"
-        } else  if (encontrado == 2) {
+        } else if (encontrado == 2) {
             localStorage.setItem("usuarioLoggeado", JSON.stringify(usuarioLoggeado))
             location.href = "admin.html"
-        }else  if (encontrado == 3) {
+        } else if (encontrado == 3) {
             localStorage.setItem("usuarioLoggeado", JSON.stringify(usuarioLoggeado))
             location.href = "usuarios.html" //aca si sos persona juridica
-        }else{
+        } else if (encontrado == 4) {
+            mostrarMensajeError("Usuario no Admitido!!!")
+        } else {
             mostrarMensajeError("Usuario o Password Incorrecto")
         }
-    }
+        }
 }
 
 
